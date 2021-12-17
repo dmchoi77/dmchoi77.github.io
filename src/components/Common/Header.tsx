@@ -26,7 +26,7 @@ const HeaderWrapper = styled.header`
    z-index : 999;
    box-shadow: 0px 0px 4px grey;
 
-   @media (max-width: 1140px) {
+   @media (max-width: 768px) {
         font-size: 13px;
         width: 100%;
         height: 50px;
@@ -36,7 +36,7 @@ const HeaderWrapper = styled.header`
 
 const HeaderNav = styled.div`
     display: flex;
-    width: 1140px;
+    width: 768px;
     height : 100%;
     margin: 0 auto;
     justify-content : space-between;
