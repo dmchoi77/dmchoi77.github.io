@@ -15,6 +15,7 @@ type UtterancesAttributesType = {
 };
 
 const UtterancesWrapper = styled.div`
+  padding-top : 40px;
 
   @media (max-width: 1140px) {
     padding: 0 20px;

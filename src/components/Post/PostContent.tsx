@@ -11,9 +11,10 @@ const MarkdownRenderer = styled.div`
   flex-direction: column;
   width: 768px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 80px 0;
   word-break: break-all;
-
+  border-bottom: 0.5px solid;  
+  
   // Markdown Style
   line-height: 1.6;
   font-size: 16px;
@@ -35,7 +36,7 @@ const MarkdownRenderer = styled.div`
   * + h1,
   * + h2,
   * + h3 {
-    margin-top: 80px;
+    margin-top: 40px;
   }
 
   hr + h1,
@@ -129,7 +130,12 @@ const MarkdownRenderer = styled.div`
 `
 
 const PostContent: FunctionComponent<PostContentProps> = function ({ html }) {
-  return <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />
+  return (
+    <>
+      <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />
+    </>
+  )
+
 }
 
 export default PostContent
