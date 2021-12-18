@@ -14,13 +14,20 @@ const PostListWrapper = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   width: 768px;
+  position: relative;
   margin: 0 auto;
   padding: 50px 0 100px;
+  top : -100px;
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+  @media (max-width: 1140px) {
+    grid-template-columns: 1fr 1fr;
     width: 100%;
     padding: 50px 20px;
+    top : 0px;
+  }
+
+  @media (max-width: 748px) {
+    grid-template-columns: 1fr;
   }
 `
 

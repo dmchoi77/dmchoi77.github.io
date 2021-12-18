@@ -9,7 +9,12 @@ const Header: FunctionComponent = function ({
     return (
         <HeaderWrapper>
             <HeaderNav>
-                <Link to="/">dmchoi</Link>
+                <li style={{ fontSize: "20px", fontWeight: "800" }}>
+                    <Link to="/">dmchoi</Link>
+                </li>
+                <li>
+                    <Link to="/">Home</Link>
+                </li>
             </HeaderNav>
 
         </HeaderWrapper>
@@ -35,6 +40,8 @@ const HeaderWrapper = styled.header`
 `
 
 const HeaderNav = styled.div`
+    // font-weight: 800;
+    // font-size : 20px;
     display: flex;
     width: 768px;
     height : 100%;
