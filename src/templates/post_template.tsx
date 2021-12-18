@@ -4,6 +4,7 @@ import Template from 'components/Common/Template'
 import PostHead from 'components/Post/PostHead'
 import { PostPageItemType } from 'types/PostItem.types' // 바로 아래에서 정의할 것입니다
 import PostContent from 'components/Post/PostContent'
+import PostTag from 'components/Post/PostTag'
 import CommentWidget from 'components/Post/CommentWidget'
 
 type PostTemplateProps = {
@@ -44,10 +45,11 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
       <PostHead
         title={title}
         date={date}
-        categories={categories}
         thumbnail={gatsbyImageData}
       />
       <PostContent html={html} />
+      <PostTag
+        categories={categories} />
       <CommentWidget />
     </Template>
   )

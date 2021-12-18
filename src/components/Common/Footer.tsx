@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 
-const FooterWrapper = styled.div`
+const FooterWrapper = styled.footer`
   background-color : black;
   display: grid;
   height : 75px; 
@@ -19,13 +19,15 @@ const FooterWrapper = styled.div`
   }
 `
 
-const Content = styled.footer`
+const Content = styled.div`
     width : 1140px;
     display : flex;
     margin : 0 auto;
     justify-content : center;
     align-items : center;
     font-weight: 500;
+    flex-direction: column;
+
     @media (max-width: 1140px) {
       width: 100%;
     }
@@ -43,8 +45,10 @@ const Footer: FunctionComponent = function () {
             Contact
           </a>
         </ul>
+        <ul>
+          © 2021 dmchoi, Powered By Gatsby.
+        </ul>
       </Content>
-      © 2021 dmchoi, Powered By Gatsby.
     </FooterWrapper>
   )
 }

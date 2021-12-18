@@ -6,7 +6,6 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 export type PostHeadInfoProps = {
   title: string
   date: string
-  categories: string[]
 }
 
 const PostHeadInfoWrapper = styled.div`
@@ -76,10 +75,9 @@ const PostData = styled.div`
 const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = function ({
   title,
   date,
-  categories,
 }) {
   const goBackPage = () => window.history.back()
-  console.log(categories)
+
   return (
     <PostHeadInfoWrapper>
       <PrevPageIcon onClick={goBackPage}>
@@ -87,9 +85,9 @@ const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = function ({
       </PrevPageIcon>
       <Title>{title}</Title>
       <PostData>
-        {categories.map(name =>
+        {/* {categories.map(name =>
           <div style={{ padding: "10px 10px", marginRight: "10px", backgroundColor: "pink", borderRadius: "100px" }}>#{name}</div>)
-        }
+        } */}
       </PostData>
       <div style={{ marginTop: "10px" }}>{date}</div>
     </PostHeadInfoWrapper>

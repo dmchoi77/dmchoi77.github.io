@@ -21,30 +21,44 @@ type GatsbyLinkProps = {
 } & CategoryItemProps
 
 const CategoryListWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 1140px;
-  margin: 100px auto 0;
-  flex-direction: column;
-  justify-content: center;
-//   position: fixed;
-  z-index: 100;
+    position: sticky;
+    display: flex;
+    top: 200px;
+
+    width: 100%;
+    // margin-left: -660px;
+
+    z-index: 10;
+    flex-direction: column;
   
   @media (max-width: 1140px) {
-    width: 100%;
-    margin-top: 50px;
-    padding: 0 20px;
+    display : none;
+    // width: 100%;
+    // margin-top: 50px;
+    // padding: 0 20px;
   }
+`
+
+const Sidebar = styled.div`
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    right: 20px;
+    width: 768px;
+    padding: 0 auto;
+    // position: sticky;
 `
 const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
     <Link {...props} />
 )) <CategoryItemProps>`
-    margin-right: 20px;
+    top: 200px;
+    // right: 46px;
+    // margin-right: 20px;
     padding: 5px 0;
     font-size: 18px;
     font-weight: ${({ active }) => (active ? '800' : '300')};
     cursor: pointer;
-    width: 100%;
+    // width: 100%;
 
     &:last-of-type {
       margin-right: 0;
@@ -62,15 +76,18 @@ const CategoryList: FunctionComponent<CategoryListProps> = function ({
 }) {
     return (
         <CategoryListWrapper>
-            {Object.entries(categoryList).map(([name, count]) => (
-                <CategoryItem
-                    to={`/?category=${name}`}
-                    active={name === selectedCategory}
-                    key={name}
-                >
-                    #{name}({count})
-                </CategoryItem>
-            ))}
+            <Sidebar>
+                <h1 style={{ marginBottom: "20px" }}>Categories</h1>
+                {Object.entries(categoryList).map(([name, count]) => (
+                    <CategoryItem
+                        to={`/?category=${name}`}
+                        active={name === selectedCategory}
+                        key={name}
+                    >
+                        #{name}({count})
+                    </CategoryItem>
+                ))}
+            </Sidebar>
         </CategoryListWrapper>
     )
 }
