@@ -41,7 +41,7 @@ const Footer: FunctionComponent = function () {
           <a href="https://github.com/dmchoi77" target='_blank'>
             Github
           </a>
-          <a href="mailto:minminnn11@daum.net">
+          <a href="mailto:dm.choi.dev@gmail.com">
             Contact
           </a>
         </ul>
