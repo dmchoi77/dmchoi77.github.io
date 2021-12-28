@@ -46,7 +46,7 @@ const Title = styled.div`
   display: -webkit-box;
   overflow: hidden;
   overflow-wrap: break-word;
-  margin-top: auto;
+  margin-top: 80px;
   text-overflow: ellipsis;
   white-space: normal;
   -webkit-line-clamp: 2;
@@ -84,11 +84,7 @@ const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = function ({
         <FontAwesomeIcon icon={faArrowLeft} />
       </PrevPageIcon>
       <Title>{title}</Title>
-      <PostData>
-        {/* {categories.map(name =>
-          <div style={{ padding: "10px 10px", marginRight: "10px", backgroundColor: "pink", borderRadius: "100px" }}>#{name}</div>)
-        } */}
-      </PostData>
+      <PostData />
       <div style={{ marginTop: "10px" }}>{date}</div>
     </PostHeadInfoWrapper>
   )
