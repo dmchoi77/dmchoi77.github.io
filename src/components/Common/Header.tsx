@@ -23,7 +23,16 @@ const Header: FunctionComponent = function ({
     const darkMode = useDarkMode(false)
     const [hide, setHide] = useState<boolean>(false);
     const [pageY, setPageY] = useState<number>(0);
-    const documentRef = useRef<HTMLDocument>(document);
+
+    // Build Error 해결 
+    if (typeof document !== 'undefined') {
+        const documentRef = useRef(document);
+
+        useEffect(() => {
+            documentRef.current.addEventListener('scroll', throttleScroll);
+            return () => documentRef.current.removeEventListener('scroll', throttleScroll);
+        }, [pageY]);
+    }
 
     const handleScroll = () => {
         const { pageYOffset } = window;
@@ -36,11 +45,6 @@ const Header: FunctionComponent = function ({
     };
 
     const throttleScroll = throttle(handleScroll, 90);
-
-    useEffect(() => {
-        documentRef.current.addEventListener('scroll', throttleScroll);
-        return () => documentRef.current.removeEventListener('scroll', throttleScroll);
-    }, [pageY]);
 
     return (
         <HeaderWrapper className={hide && 'hide'}>
