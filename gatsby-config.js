@@ -20,6 +20,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
+    {
       resolve: "gatsby-plugin-typescript",
       options: {
         isTSX: true,
@@ -28,7 +36,8 @@ module.exports = {
     },
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
-    "gatsby-plugin-sitemap",
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-use-dark-mode`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

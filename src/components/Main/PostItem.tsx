@@ -62,9 +62,9 @@ const Category = styled.div`
 
 const CategoryItem = styled.div`
   margin: 2.5px 5px;
-  padding: 3px 5px;
-  border-radius: 3px;
-  background: black;
+  padding: 4px 10px;
+  border-radius: 150px;
+  background: rgba(0,0,0,0.6);
   font-size: 14px;
   font-weight: 700;
   color: white;

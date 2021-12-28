@@ -5,8 +5,8 @@ import PostItem from 'components/Main/PostItem'
 import useInfiniteScroll from 'hooks/useInfiniteScroll'
 
 type PostListProps = {
-    selectedCategory: string,
-    posts: PostListItemType[]
+  selectedCategory: string,
+  posts: PostListItemType[]
 }
 
 const PostListWrapper = styled.div`
@@ -16,14 +16,14 @@ const PostListWrapper = styled.div`
   width: 768px;
   position: relative;
   margin: 0 auto;
-  padding: 50px 0 100px;
+  padding: 130px 0 100px;
   top : -100px;
 
   @media (max-width: 1140px) {
     grid-template-columns: 1fr 1fr;
     width: 100%;
     padding: 50px 20px;
-    top : 0px;
+    top : 50px;
   }
 
   @media (max-width: 748px) {
@@ -32,22 +32,22 @@ const PostListWrapper = styled.div`
 `
 
 const PostList: FunctionComponent<PostListProps> = function ({
-    posts,
-    selectedCategory,
+  posts,
+  selectedCategory,
 }) {
 
-    const { containerRef, postList } = useInfiniteScroll(selectedCategory, posts)
+  const { containerRef, postList } = useInfiniteScroll(selectedCategory, posts)
 
-    return (
-        <PostListWrapper ref={containerRef}>
-            {postList.map(({ node: {
-                id,
-                fields: { slug },
-                frontmatter } }: PostListItemType) => (
-                <PostItem {...frontmatter} link={slug} key={id} />
-            ))}
-        </PostListWrapper>
-    )
+  return (
+    <PostListWrapper ref={containerRef}>
+      {postList.map(({ node: {
+        id,
+        fields: { slug },
+        frontmatter } }: PostListItemType) => (
+        <PostItem {...frontmatter} link={slug} key={id} />
+      ))}
+    </PostListWrapper>
+  )
 }
 
 export default PostList

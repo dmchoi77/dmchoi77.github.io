@@ -18,6 +18,16 @@ const defaultStyle = css`
     height: 100%;
   }
 
+  body.light-mode {
+    color: rgba(0,0,0,0.8);
+    background-color: rgb(255 250 237 / 66%);
+  }
+
+  body.dark-mode {
+    color: #fff;
+    background-color: #363636;
+  }
+
   a,
   a:hover {
     color: inherit;
@@ -29,6 +39,13 @@ const defaultStyle = css`
     padding: 0 6px;
   }
 
+  .mode-icon {
+    height: 1.25rem;
+    width: 1.25rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    color : #ffc500;
+  }
   
 `
 

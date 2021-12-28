@@ -28,7 +28,7 @@ const CategoryListWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   position: sticky;
-  top : 200px;
+  top : 240px;
   
   @media (max-width: 1140px) {
     display: none;

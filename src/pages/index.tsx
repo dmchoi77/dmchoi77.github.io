@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useMemo } from 'react'
-import Introduction from 'components/Main/Introduction'
+// import Introduction from 'components/Main/Introduction'
 import CategoryList, { CategoryListProps } from 'components/Main/CategoryList'
 import PostList from 'components/Main/PostList'
 import { graphql } from 'gatsby'
@@ -39,7 +39,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
     },
     allMarkdownRemark: { edges },
     file: {
-      childImageSharp: { gatsbyImageData },
+      // childImageSharp: { gatsbyImageData },
       publicURL
     },
   },
@@ -82,7 +82,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       url={siteUrl}
       image={publicURL}
     >
-      <Introduction profileImage={gatsbyImageData} />
+      {/* <Introduction profileImage={gatsbyImageData} /> */}
       <CategoryList
         selectedCategory={selectedCategory}
         categoryList={categoryList}
@@ -133,4 +133,4 @@ export const getPostList = graphql`
       publicURL
     }
   }
-`;
+`

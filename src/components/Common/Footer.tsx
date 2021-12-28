@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 
 const FooterWrapper = styled.footer`
-  background-color : black;
+  background-color : rgba(0, 0, 0, 0.9);
   display: grid;
   height : 75px; 
   place-items: center;

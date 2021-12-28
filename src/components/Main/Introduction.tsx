@@ -9,7 +9,7 @@ type IntroductionProps = {
 
 const Background = styled.div`
   width: 100%;
-  background: #ffff;
+  background: #f5d17f;
   padding-top : 63px;
   display: flex;
 `
