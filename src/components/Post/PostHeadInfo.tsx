@@ -13,13 +13,13 @@ const PostHeadInfoWrapper = styled.div`
   flex-direction: column;
   width: 768px;
   height: 100%;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 60px 0;
   color: #ffffff;
 
   @media (max-width: 768px) {
     width: 100%;
-    padding: 45px 20px;
+    padding: 15px 20px;
   }
 `
 
@@ -46,7 +46,7 @@ const Title = styled.div`
   display: -webkit-box;
   overflow: hidden;
   overflow-wrap: break-word;
-  margin-top: 80px;
+  margin-top: 40px;
   text-overflow: ellipsis;
   white-space: normal;
   -webkit-line-clamp: 2;
