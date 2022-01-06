@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://dmchoi77.github.io/</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://dmchoi77.github.io/?category=All</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dmchoi77.github.io/?category=JavaScript</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dmchoi77.github.io/?category=React</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dmchoi77.github.io/?category=DOM</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dmchoi77.github.io/?category=SSR</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dmchoi77.github.io/?category=CSR</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dmchoi77.github.io/?category=git</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dmchoi77.github.io/?category=TypeScript</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dmchoi77.github.io/?category=HTML5</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dmchoi77.github.io/string-method/</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dmchoi77.github.io/array-method/</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dmchoi77.github.io/var-let-const/</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dmchoi77.github.io/react-virtual-dom/</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dmchoi77.github.io/DOM%EC%9D%B4%EB%9E%80/</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dmchoi77.github.io/SSR%EA%B3%BC-CSR/</loc>
+  <lastmod>2022-01-06T13:31:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
