@@ -4,6 +4,7 @@ import GlobalStyle from 'components/Common/GlobalStyle'
 import Footer from 'components/Common/Footer'
 import Header from 'components/Common/Header'
 import { Helmet } from 'react-helmet'
+import { CategoryListProps } from 'components/Main/CategoryList'
 
 type TemplateProps = {
     title: string
@@ -11,7 +12,7 @@ type TemplateProps = {
     url: string
     image: string
     children: ReactNode
-}
+} & CategoryListProps
 
 const Container = styled.main`
   display: flex;
@@ -24,7 +25,10 @@ const Template: FunctionComponent<TemplateProps> = function ({
     description,
     url,
     image,
-    children }) {
+    children,
+    selectedCategory,
+    categoryList
+}) {
 
     return (
         <Container>
@@ -53,7 +57,11 @@ const Template: FunctionComponent<TemplateProps> = function ({
 
                 <html lang="ko" />
             </Helmet>
-            <Header />
+            <Header
+                selectedCategory={selectedCategory}
+                categoryList={categoryList}
+                mode="toggle"
+            />
             <GlobalStyle />
             {children}
             <Footer />

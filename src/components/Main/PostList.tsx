@@ -11,16 +11,15 @@ type PostListProps = {
 
 const PostListWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
-  width: 768px;
+  width: 600px;
   position: relative;
   margin: 0 auto;
   padding: 130px 0 100px;
-  top : -100px;
+  top : -33px;
 
   @media (max-width: 1140px) {
-    grid-template-columns: 1fr 1fr;
     width: 100%;
     padding: 50px 20px;
     top : 50px;

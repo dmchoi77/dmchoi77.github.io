@@ -24,12 +24,11 @@ const PostItemWrapper = styled(Link)`
 
 const ThumbnailImage = styled(GatsbyImage)`
   width: 100%;
-  height: 300px;
+  height: 230px;
   border-radius: 10px 10px 0 0;
 `
 
 const PostItemContent = styled.div`
-  flex: 1;
   display: flex;
   flex-direction: column;
   padding: 15px;

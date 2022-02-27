@@ -3,7 +3,9 @@ import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import useDarkMode from "use-dark-mode"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons"
+import { faSun, faMoon, faBars } from "@fortawesome/free-solid-svg-icons"
+import { CategoryListProps } from 'components/Main/CategoryList'
+import CategoryList from 'components/Main/CategoryList'
 
 const throttle = (callback: Function, waitTime: number) => {
     let timerId: any = null;
@@ -17,8 +19,9 @@ const throttle = (callback: Function, waitTime: number) => {
     };
 }
 
-const Header: FunctionComponent = function ({
-
+const Header: FunctionComponent<CategoryListProps> = function ({
+    selectedCategory,
+    categoryList
 }) {
     const darkMode = useDarkMode(false)
     const [hide, setHide] = useState<boolean>(false);
@@ -45,13 +48,35 @@ const Header: FunctionComponent = function ({
     };
 
     const throttleScroll = throttle(handleScroll, 90);
+    const [toggle, setToggle] = useState(false)
+
+    const toggleHandler = () => {
+        setToggle((val) => !val)
+    }
 
     return (
         <HeaderWrapper className={hide && 'hide'}>
             <HeaderNav>
-                <li style={{ fontSize: "20px", fontWeight: "800" }}>
+                <ToggleButton>
+                    <FontAwesomeIcon
+                        icon={faBars}
+                        onClick={toggleHandler}
+                    />
+                </ToggleButton>
+                {
+                    toggle ?
+                        <div onClick={toggleHandler}>
+                            <CategoryList
+                                selectedCategory={selectedCategory}
+                                categoryList={categoryList}
+                                mode="toggle"
+                            />
+                        </div>
+                        : null
+                }
+                <BrandName>
                     <Link to="/">dmchoi</Link>
-                </li>
+                </BrandName>
                 <div style={{ display: "flex", alignItems: "center" }}>
                     <li>
                         <Link to="/">Home</Link>
@@ -75,6 +100,7 @@ const Header: FunctionComponent = function ({
 }
 export default Header
 
+
 const HeaderWrapper = styled.header`
    width : 100%;
    height : 62px;
@@ -95,7 +121,7 @@ const HeaderWrapper = styled.header`
         width: 100%;
         height: 50px;
         padding: 0 20px;
-      }
+    }
 `
 
 const HeaderNav = styled.div`
@@ -107,4 +133,25 @@ const HeaderNav = styled.div`
     margin: 0 auto;
     justify-content : space-between;
     align-items : center;
+
+    @media (max-width: 1140px) {
+        width: 90%;
+    }
+`
+
+const ToggleButton = styled.button`
+    display: none;
+    border: none;
+    background-color: transparent;
+    @media (max-width: 1140px) {
+        display: block;
+    }
+`
+
+const BrandName = styled.li`
+    font-size: 20px;
+    font-weight: 800;
+    @media (max-width: 1140px) {
+        display: none;
+    }
 `
