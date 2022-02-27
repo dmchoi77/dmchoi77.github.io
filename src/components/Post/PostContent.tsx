@@ -11,7 +11,7 @@ const MarkdownRenderer = styled.div`
   flex-direction: column;
   width: 768px;
   margin: 0 auto;
-  padding: 80px 0 30px;
+  padding: 40px 0 30px;
   word-break: break-all;
   
   // Markdown Style
@@ -58,7 +58,7 @@ const MarkdownRenderer = styled.div`
 
   // Adjust Quotation Element Style
   blockquote {
-    margin: 30px 0;
+    margin: 20px 0;
     padding: 5px 15px;
     border-left: 2px solid #000000;
     font-weight: 800;
@@ -85,7 +85,7 @@ const MarkdownRenderer = styled.div`
 
   // Adjust Code Style
   pre[class*='language-'] {
-    margin: 30px 0;
+    margin: 20px 0;
     padding: 15px;
     font-size: 15px;
 
