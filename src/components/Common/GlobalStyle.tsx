@@ -2,13 +2,18 @@ import React, { FunctionComponent } from 'react'
 import { Global, css } from '@emotion/react'
 
 const defaultStyle = css`
-  @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,800&family=Do+Hyeon:wght@400;700;800&display=swap');
-  
+  @font-face {
+    font-family: 'OTWelcomeBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeBA.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
   * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'OTWelcomeBA';
     list-style:none;
   }
 
