@@ -26,8 +26,8 @@ const Template: FunctionComponent<TemplateProps> = function ({
     url,
     image,
     children,
-    selectedCategory,
-    categoryList
+    // selectedCategory,
+    // categoryList
 }) {
 
     return (
@@ -58,8 +58,8 @@ const Template: FunctionComponent<TemplateProps> = function ({
                 <html lang="ko" />
             </Helmet>
             <Header
-                selectedCategory={selectedCategory}
-                categoryList={categoryList}
+                // selectedCategory={selectedCategory}
+                // categoryList={categoryList}
                 mode="toggle"
             />
             <GlobalStyle />

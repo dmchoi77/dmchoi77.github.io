@@ -8,6 +8,9 @@ import { CategoryListProps } from 'components/Main/CategoryList'
 import CategoryList from 'components/Main/CategoryList'
 import { PostListItemType } from 'types/PostItem.types'
 
+type HeaderProps = {
+    mode: string
+}
 const throttle = (callback: Function, waitTime: number) => {
     let timerId: any = null;
 
@@ -20,7 +23,7 @@ const throttle = (callback: Function, waitTime: number) => {
     };
 }
 
-const Header: FunctionComponent<CategoryListProps> = function ({
+const Header: FunctionComponent<HeaderProps> = function ({
 }) {
     const darkMode = useDarkMode(false)
     const [hide, setHide] = useState<boolean>(false);
