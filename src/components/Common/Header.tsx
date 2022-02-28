@@ -1,11 +1,12 @@
-import React, { FunctionComponent, useState, useRef, useEffect } from 'react'
-import { Link } from 'gatsby'
+import React, { FunctionComponent, useState, useRef, useEffect, useMemo } from 'react'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import styled from '@emotion/styled'
 import useDarkMode from "use-dark-mode"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faMoon, faBars } from "@fortawesome/free-solid-svg-icons"
 import { CategoryListProps } from 'components/Main/CategoryList'
 import CategoryList from 'components/Main/CategoryList'
+import { PostListItemType } from 'types/PostItem.types'
 
 const throttle = (callback: Function, waitTime: number) => {
     let timerId: any = null;
@@ -20,8 +21,6 @@ const throttle = (callback: Function, waitTime: number) => {
 }
 
 const Header: FunctionComponent<CategoryListProps> = function ({
-    selectedCategory,
-    categoryList
 }) {
     const darkMode = useDarkMode(false)
     const [hide, setHide] = useState<boolean>(false);
@@ -53,7 +52,65 @@ const Header: FunctionComponent<CategoryListProps> = function ({
     const toggleHandler = () => {
         setToggle((val) => !val)
     }
+    const data = useStaticQuery(graphql`
+        query getList {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+              }
+            }
+            allMarkdownRemark(
+                sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] }
+              ) {
+                edges {
+                  node {
+                    id
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      summary
+                      date(formatString: "YYYY년 MM월 DD일")
+                      categories
+                      thumbnail {
+                        childImageSharp {
+                          gatsbyImageData(width: 768, height: 400)
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+    
+        }
+    `)
+    const { allMarkdownRemark } = data
+    const categoryList = useMemo(() =>
+        allMarkdownRemark.edges.reduce(
+            (list: CategoryListProps['categoryList'],
+                {
+                    node: {
+                        frontmatter: { categories },
+                    },
+                }: PostListItemType) => {
+                categories.forEach(category => {
+                    if (list[category] === undefined)
+                        list[category] = 1
+                    else
+                        list[category]++
+                })
 
+                list['All']++
+
+                return list
+            },
+            { All: 0 },
+        ),
+        [],
+    )
     return (
         <HeaderWrapper className={hide && 'hide'}>
             <HeaderNav>
@@ -67,8 +124,8 @@ const Header: FunctionComponent<CategoryListProps> = function ({
                     toggle ?
                         <div onClick={toggleHandler}>
                             <CategoryList
-                                selectedCategory={selectedCategory}
                                 categoryList={categoryList}
+                                selectedCategory=''
                                 mode="toggle"
                             />
                         </div>
