@@ -10,7 +10,7 @@
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> calculate <span class="token operator">=</span> <span class="token function">useCallback</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">num</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
 	<span class="token keyword">return</span> num <span class="token operator">+</span> <span class="token number">1</span>
 <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre></div>
-<p>이제 calaulate라는 변수는 메모이제이션된 함수를 갖게 되는 것입니다.</p>
+<p>이제 calculate라는 변수는 메모이제이션된 함수를 갖게 되는 것입니다.</p>
 <p>함수가 다시 필요할 때마다 메모리에서 가져와서 재사용하게 됩니다.</p>
 <br>
 아래의 일반적인 함수형 컴포넌트에서의 렌더링 과정은 다음과 같습니다.
