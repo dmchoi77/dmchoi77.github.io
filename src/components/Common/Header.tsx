@@ -125,13 +125,11 @@ const Header: FunctionComponent<HeaderProps> = function ({
                 </ToggleButton>
                 {
                     toggle ?
-                        <div onClick={toggleHandler}>
-                            <CategoryList
-                                categoryList={categoryList}
-                                selectedCategory=''
-                                mode="toggle"
-                            />
-                        </div>
+                        <CategoryList
+                            categoryList={categoryList}
+                            selectedCategory=''
+                            mode="toggle"
+                        />
                         : null
                 }
                 <BrandName>
@@ -203,6 +201,7 @@ const ToggleButton = styled.button`
     display: none;
     border: none;
     background-color: transparent;
+    cursor: pointer;
     @media (max-width: 1140px) {
         display: block;
     }
