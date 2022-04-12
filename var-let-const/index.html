@@ -8,7 +8,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"kim"</span><span class="token punctuation">;</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// kim</span></code></pre></div>
 <p>하지만, 이러한 특징은 대규모 프로젝트 진행 시 위험성이 있습니다.</p>
-<p>예를 들어, 같은 프로젝트를 진행하고 있는 A 개발자가 var num을 사용했는데 B 개발자는 이를 모르고 var num을 똑같이 선언해서 사용하게 됩니다.</p>
+<p>예를 들어, 같은 프로젝트를 진행하고 있는 A 개발자가 var num을 사용했는데 B 개발자는 이를 모르고 var num을 똑같이 선언해서 사용하게 된다면</p>
 <p>실행할때는 문제가 되지 않기 때문에, 서로 같은 변수명을 선언 했는지 인지하지 못하지만</p>
 <p>이는 나중에 문제가 될 수 있습니다. 그래서 var 선언을 권장하지 않습니다.</p>
 <h2>let</h2>
@@ -52,7 +52,7 @@ name <span class="token operator">=</span> <span class="token string">"choi"</sp
 let과 const는 TDZ의 영향을 받는데, 이는 변수의 생성 과정과 관련이 있습니다</p>
 <p>변수의 생성 과정은 3단계로 이뤄집니다.</p>
 <blockquote>
-<p>1. 선언 단계 <br> 2. 초기화 단계 (undefined를 할당) <br>3. 할당 딘계</p>
+<p>1. 선언 단계 <br> 2. 초기화 단계 (undefined를 할당) <br>3. 할당 단계</p>
 </blockquote>
 <p>var는 선언 단계와 초기화 단계가 동시에 일어납니다. 그래서 할당하가 전에 호출하면 에러가 발생하지 않고 undefined가 나오게 되는 것입니다.</p>
 <br>
@@ -74,14 +74,14 @@ let은 선언 단계와 초기화 단계가 분리 돼서 진행이 됩니다. �
 <span class="token comment">// 이는 의도치 않게 변수값이 변경되는 부작용을 발생시킵니다.</span>
 <span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-console<span class="token punctuation">.</span><span class="token number">1</span><span class="token function">og</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 10</span></code></pre></div>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 10</span></code></pre></div>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
 <span class="token comment">// for문에서 선언한 i는 전역 변수입니다. 이미 선언된 전역 변수 i가 있으므로 중복 선언이 됩니다.</span>
 <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-	console<span class="token punctuation">.</span><span class="token number">1</span><span class="token function">og</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 0 1 2 3 4</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 0 1 2 3 4</span>
 <span class="token punctuation">}</span>
 <span class="token comment">// 의도치 않게 i 변수의 값이 변경되었습니다.</span>
-console<span class="token punctuation">.</span><span class="token number">1</span><span class="token function">og</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 5</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 5</span>
 </code></pre></div>
 <p>let과 const는 블록 스코프입니다.</p>
 <p>let과 const로 선언한 변수는 함수, if문, for문, while문, try/catch문 등을 지역 스코프로 인정하는 블록 레벨 스코프를 따릅니다.</p>
