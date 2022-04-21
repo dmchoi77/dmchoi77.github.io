@@ -17,9 +17,14 @@ console<span class="token punctuation">.</span><span class="token function">log<
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 3</span>
 
 <span class="token keyword">let</span> num <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span> <span class="token comment">// 중복 선언이 되지 않기 때문에 에러 발생!</span></code></pre></div>
-<p>let을 사용하면 서로 다른 개발자들이 똑같은 변수를 선언하는 일이 적어져 안정성이 높아집니다.</p>
+<p>let을 사용하면 똑같은 변수를 선언하는 일이 적어져 안정성이 높아집니다.</p>
+<br>
+<p>let은 재할당이 가능합니다.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'choi'</span><span class="token punctuation">;</span>
+
+name <span class="token operator">=</span> <span class="token string">'kim;'</span><span class="token punctuation">;</span></code></pre></div>
 <h2>const</h2>
-<p>const는 let처럼 변수 중복 선언이 불가능합니다.</p>
+<p>const는 let처럼 변수 중복 선언이 불가능하며, 재할당도 불가능합니다.</p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> num <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> num <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span> <span class="token comment">// 에러발생</span></code></pre></div>
