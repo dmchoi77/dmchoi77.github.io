@@ -1,0 +1,266 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.e53586a225ffdde20c86.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><meta name="generator" content="Gatsby 4.3.0"/><link rel="canonical" href="https://dmchoi77.github.io/React/클래스형-컴포넌트-함수형-컴포넌트/" data-baseprotocol="https:" data-basehost="dmchoi77.github.io"/><title data-react-helmet="true">클래스형 컴포넌트 vs 함수형 컴포넌트</title><meta data-react-helmet="true" name="description" content="리액트에서 컴포넌트를 선언하는 방식에는 클래스형 컴포넌트와 함수형 컴포넌트 두 가지가 있다"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1.0"/><meta data-react-helmet="true" http-equiv="Content-Type" content="text/html;charset=UTF-8"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:title" content="클래스형 컴포넌트 vs 함수형 컴포넌트"/><meta data-react-helmet="true" property="og:description" content="리액트에서 컴포넌트를 선언하는 방식에는 클래스형 컴포넌트와 함수형 컴포넌트 두 가지가 있다"/><meta data-react-helmet="true" property="og:image"/><meta data-react-helmet="true" property="og:url"/><meta data-react-helmet="true" property="og:site_name" content="클래스형 컴포넌트 vs 함수형 컴포넌트"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="클래스형 컴포넌트 vs 함수형 컴포넌트"/><meta data-react-helmet="true" name="twitter:description" content="리액트에서 컴포넌트를 선언하는 방식에는 클래스형 컴포넌트와 함수형 컴포넌트 두 가지가 있다"/><meta data-react-helmet="true" name="twitter:image"/><meta data-react-helmet="true" name="twitter:site" content="@사용자이름"/><meta data-react-helmet="true" name="twitter:creator" content="@사용자이름"/><meta data-react-helmet="true" name="google-site-verification" content="PDiP1n57bVVgqNXEDqtRl4nlNIVodByW-1HYmtD_ZXI"/><meta data-react-helmet="true" name="naver-site-verification" content="ac22b6a167833419dfd869c6f560e82a2963ab20"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link as="script" rel="preload" href="/webpack-runtime-76a0cc5197c1b6da3fc2.js"/><link as="script" rel="preload" href="/framework-8d1138a25637f5ba2109.js"/><link as="script" rel="preload" href="/app-66f0ec01e30b8b887410.js"/><link as="script" rel="preload" href="/cb1608f2-40242bba701caad7c6e4.js"/><link as="script" rel="preload" href="/d0dcf9c1039535d44ee74defc829dfbf62dac3c5-0ed1d7ffb0858beb014d.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-tsx-d3d5aaf3dc84eedbc043.js"/><link as="fetch" rel="preload" href="/page-data/React/클래스형-컴포넌트-함수형-컴포넌트/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2184703122.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><script>!function(e,a,o){function d(e){document.body.classList.add(e?"dark-mode":"light-mode"),document.body.classList.remove(e?"light-mode":"dark-mode")}var t=window.matchMedia("(prefers-color-scheme: dark)"),r="(prefers-color-scheme: dark)"===t.media,s=null;try{s=localStorage.getItem("darkMode")}catch(e){}var c=null!==s;if(c&&(s=JSON.parse(s)),c)d(s);else if(r)d(t.matches),localStorage.setItem("darkMode",t.matches);else{var l=document.body.classList.contains("dark-mode");localStorage.setItem("darkMode",JSON.stringify(l))}}();</script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1mj1r1a0"><style data-emotion="css 1ldmrkw">.css-1ldmrkw{width:100%;height:62px;position:fixed;background-color:rgb(230 221 197);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;z-index:999;box-shadow:0px 0px 1px grey;color:rgba(0,0,0,0.8)!important;-webkit-transition:0.4s ease;transition:0.4s ease;}.css-1ldmrkw.hide{-webkit-transform:translateY(-80px);-moz-transform:translateY(-80px);-ms-transform:translateY(-80px);transform:translateY(-80px);}@media (max-width: 768px){.css-1ldmrkw{font-size:13px;width:100%;height:50px;padding:0 20px;}}</style><header class="false css-1ldmrkw e1svho3n3"><style data-emotion="css 2zqvmj">.css-2zqvmj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:768px;height:100%;margin:0 auto;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}@media (max-width: 1140px){.css-2zqvmj{width:90%;}}</style><div class="css-2zqvmj e1svho3n2"><style data-emotion="css 1021nyz">.css-1021nyz{display:none;border:none;background-color:transparent;cursor:pointer;}@media (max-width: 1140px){.css-1021nyz{display:block;}}</style><button class="css-1021nyz e1svho3n1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></button><style data-emotion="css c9pv3r">.css-c9pv3r{font-size:20px;font-weight:800;}@media (max-width: 1140px){.css-c9pv3r{display:none;}}</style><li class="css-c9pv3r e1svho3n0"><a href="/">dmchoi</a></li><div style="display:flex;align-items:center"><li><a href="/">Home</a></li><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="svg-inline--fa fa-sun fa-w-16 mode-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"></path></svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon" class="svg-inline--fa fa-moon fa-w-16 mode-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"></path></svg></div></div></header><style data-emotion="css-global aax5h7">@font-face{font-family:'OTWelcomeBA';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeBA.woff2') format('woff2');font-weight:normal;font-style:normal;}*{padding:0;margin:0;box-sizing:border-box;font-family:'OTWelcomeBA';list-style:none;}html,body,#___gatsby{height:100%;}body.light-mode{color:rgba(0,0,0,0.8);background-color:rgb(255 250 237 / 66%);}body.light-mode a{color:rgba(0,0,0,0.8);}body.dark-mode{color:#fff;background-color:#363636;}a{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}ul a{padding:0 6px;}.mode-icon{height:1.25rem;width:1.25rem;margin-left:1rem;cursor:pointer;color:#ffc500;}</style><style data-emotion="css 1pp2wlr">.css-1pp2wlr{position:relative;width:768px;height:100%;margin:100px auto 0;}</style><div class="css-1pp2wlr e17ggu5u2"><style data-emotion="css 13d1xre">.css-13d1xre{width:768px;}@media (max-width: 768px){.css-13d1xre{width:100%;padding:0px 20px;font-size:28px;}}</style><h1 class="css-13d1xre e17ggu5u1">클래스형 컴포넌트 vs 함수형 컴포넌트</h1><style data-emotion="css d65hdi">.css-d65hdi{padding:20px 0px;width:768px;}@media (max-width: 768px){.css-d65hdi{width:100%;padding:20px 20px;}}</style><div class="css-d65hdi e17ggu5u0">2021년 08월 02일</div></div><style data-emotion="css i97sjl">.css-i97sjl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:40px 0 30px;word-break:break-all;line-height:1.6;font-size:20px;font-weight:400;}.css-i97sjl p{padding:3px 0;}.css-i97sjl h1,.css-i97sjl h2,.css-i97sjl h3{font-weight:800;margin-bottom:20px;}.css-i97sjl *+h1,.css-i97sjl *+h2,.css-i97sjl *+h3{margin-top:40px;}.css-i97sjl hr+h1,.css-i97sjl hr+h2,.css-i97sjl hr+h3{margin-top:0;}.css-i97sjl h1{font-size:30px;}.css-i97sjl h2{font-size:25px;}.css-i97sjl h3{font-size:20px;}.css-i97sjl blockquote{margin:20px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-i97sjl ol,.css-i97sjl ul{margin-left:20px;padding:10px 0;}.css-i97sjl hr{border:1px solid #000000;margin:100px 0;}.css-i97sjl a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;}.css-i97sjl pre[class*='language-']{margin:20px 0;padding:15px;font-size:15px;}.css-i97sjl pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-i97sjl code[class*='language-'],.css-i97sjl pre[class*='language-']{tab-size:2;}@media (max-width: 768px){.css-i97sjl{width:100%;padding:20px 20px;line-height:1.6;font-size:14px;}.css-i97sjl h1{font-size:23px;}.css-i97sjl h2{font-size:20px;}.css-i97sjl h3{font-size:17px;}.css-i97sjl img{width:100%;}.css-i97sjl hr{margin:50px 0;}}</style><div class="css-i97sjl e1k0w50"><p>리액트에서 컴포넌트를 선언하는 방식에는 클래스형 컴포넌트와 함수형 컴포넌트 두 가지가 있습니다.
+과거에는 클래스형 컴포넌트를 주로 사용했지만, 2019년 v16.8부터 함수형 컴포넌트에 리액트 훅(Hook)을 지원하며 현재 리액트 공식 문서에서는 함수형 컴포넌트 사용을 권장하고 있습니다.</p>
+<p>하지만, 아직 클래스형 컴포넌트를 사용하고 있는 곳들이 있어 유지보수를 위해 두 가지 방식 모두 알고는 있어야 힙니다.</p>
+<h2>클래스형 컴포넌트</h2>
+<p>클래스형 컴포넌트의 특징은 다음과 같습니다.</p>
+<blockquote>
+<p>Class keyword를 사용해서 선언</p>
+</blockquote>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span> 
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span> <span class="token comment">// 1. Component로 상속을 받아야합니다.</span>
+	<span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 2. render()를 사용하여 JSX를 반환합니다.</span>
+	<span class="token keyword">return</span> <span class="token operator">...</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
+<blockquote>
+<p>상태 업데이트</p>
+</blockquote>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      name<span class="token operator">:</span> <span class="token string">"choi"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">"kim"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span>버튼<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
+<p>1. constructor에서 this.state 로 초기값 설정이 가능합니다.</p>
+<p>2. 클래스형 컴포넌트의 state는 객체 형식입니다.</p>
+<p>3. this.setState()를 사용해서 state 값을 변경합니다.</p>
+<br>
+<p>그런데 super(props)는 갑자기 어디서 나왔을까요? <a href="https://ko.reactjs.org/docs/react-component.html" target="_blank" rel="nofollow">리액트 공식 문서</a>에 다음과 같이 나와있습니다.</p>
+<blockquote>
+<h3>constructor()</h3>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span></code></pre></div>
+</blockquote>
+<p>메서드를 바인딩하거나 state를 초기화하는 작업이 없다면, 해당 React 컴포넌트에는 생성자를 구현하지 않아도 됩니다.</p>
+<p>React 컴포넌트의 생성자는 해당 컴포넌트가 마운트되기 전에 호출됩니다.</p>
+<p>React.Component를 상속한 컴포넌트의 생성자를 구현할 때에는 다른 구문에 앞서 super(props)를 호출해야 합니다. 그렇지 않으면 this.props가 생성자 내에서 정의되지 않아 버그로 이어질 수 있습니다.</p>
+<br>
+React에서 생성자는 보통 아래의 두 가지 목적을 위하여 사용됩니다.
+<p>1.this.state에 객체를 할당하여 지역 state를 초기화</p>
+<p>2.인스턴스에 이벤트 처리 메서드를 바인딩</p>
+<br>
+<blockquote>
+<p>props를 조회하거나 이벤트 핸들링을 할 때 this를 사용</p>
+</blockquote>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      number<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment">// 화살표 함수로도 선언 가능</span>
+  <span class="token function-variable function">plusNumber</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> number<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>number <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// plusNumber() {</span>
+  <span class="token comment">//   this.setState({ number: this.state.number + 1 });</span>
+  <span class="token comment">// }</span>
+  <span class="token comment">// plusNumber = this.plusNumber.bind(this);</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// const [name,age] = this.props</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+      <span class="token punctuation">{</span>name<span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span>li<span class="token operator">></span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>number<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+        <span class="token operator">&lt;</span>button
+          onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>plusNumber<span class="token punctuation">}</span>
+        <span class="token operator">></span>
+          버튼
+        <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
+<blockquote>
+<p>LifeCycle 메소드를 가진다.</p>
+</blockquote>
+<p>리액트에서는 컴포넌트 LifeCycle(생명주기)라는 것을 가집니다.</p>
+<p>컴포넌트가 실행(생성)될 때, 업데이트될 때, 제거될 때 호출되는 메서드들입니다.</p>
+<br>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/3d01a21d8b61fd360b4a6375a554aa91/2bae1/react-lifecycle.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 36.97916666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABYklEQVQozz2Q0XKbMBBF/f9/16atbRLiALYR2AhJSEhCsk8HnHZndnb2Ppy9e3fP55N/lVMizI72ekHJgRg83nuC9wghaJozSilijPh5JoZAJzpEK7Y9pcRuBS3LQs6ZuCzcleez7jgLhZ48zk44a1HjiBwGJmOw00tbDxmt0UoxO7dxdvnxQHQ9t9sd7wMfIvKjlLx9WVoZmYxGypHJTGilMcZwv983QPh2v7pb+wXMGWMmnHPMPlB2iaLNvIvMRw+/as/Pk+W9g/0lcWwfHK4JZeYtHmst9vuLDbhmuOUUImmJJHsmmopsG6ws0X3BLE8E/cUyVWTXsEw1wdv/2fN89Wput1Kv15auvxFjYNQ1bXdA3Aq0PqNVQy9LRF/QdkeG8RNtG3xwqFkjpKAdBHKSpJxeDlPKG30VPruKfVPwuzkircIEy2moKK7lpq+zHi+44KhuFX/qPYfmQClKlrTwFzlcFduvwQ4NAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/3d01a21d8b61fd360b4a6375a554aa91/a59e9/react-lifecycle.webp 192w,
+/static/3d01a21d8b61fd360b4a6375a554aa91/0ca9f/react-lifecycle.webp 384w,
+/static/3d01a21d8b61fd360b4a6375a554aa91/dc9b9/react-lifecycle.webp 768w,
+/static/3d01a21d8b61fd360b4a6375a554aa91/e2c2f/react-lifecycle.webp 1152w,
+/static/3d01a21d8b61fd360b4a6375a554aa91/f3efb/react-lifecycle.webp 1536w,
+/static/3d01a21d8b61fd360b4a6375a554aa91/20d3c/react-lifecycle.webp 2308w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/3d01a21d8b61fd360b4a6375a554aa91/3b721/react-lifecycle.png 192w,
+/static/3d01a21d8b61fd360b4a6375a554aa91/66595/react-lifecycle.png 384w,
+/static/3d01a21d8b61fd360b4a6375a554aa91/fe486/react-lifecycle.png 768w,
+/static/3d01a21d8b61fd360b4a6375a554aa91/d2d74/react-lifecycle.png 1152w,
+/static/3d01a21d8b61fd360b4a6375a554aa91/e8464/react-lifecycle.png 1536w,
+/static/3d01a21d8b61fd360b4a6375a554aa91/2bae1/react-lifecycle.png 2308w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/3d01a21d8b61fd360b4a6375a554aa91/fe486/react-lifecycle.png"
+            alt="react-class-lifecycle"
+            title="react-class-lifecycle"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<div>(출처: http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)</div>
+<br>
+<p>LifeCycle에는 componentDidMount, componentDidUpdate, componentWillUnmount 등의 메서드가 있습니다.</p>
+<p>요즘은 거의 함수형 컴포넌트를 사용하기 때문에 이런게 있다는 정도만 알고 지나가겠습니다.</p>
+<br>
+<h2>함수형 컴포넌트</h2>
+<p>함수형 컴포넌트는 말 그대로 함수를 기반으로 작성하는 컴포넌트입니다.</p>
+<p>리액트 v16.8 이전의 함수형 컴포넌트는 state나 LifeCycle에 정의된 메서드를 사용할 수 없어서 비교적 간단한 동작을 하는데에 사용했습니다.</p>
+<p>이후 Hook이 등장하면서 함수형 컴포넌트에서도 클래스형 컴포넌트처럼 여러 가지 동작을 할 수 있게 됐습니다.</p>
+<p>메모리 자원을 클래스형 컴포넌트보다 덜 사용하며, 코드도 클래스형 컴포넌트에 비해 짧고 컴포넌트 선언이 편리합니다.</p>
+<br>
+<p>함수형 컴포넌트의 특징은 다음과 같습니다.</p>
+<blockquote>
+<p>선언 방식이 간단합니다.</p>
+</blockquote>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> name <span class="token operator">=</span> 'Functional Component" 
+  <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
+<blockquote>
+<p>useState Hook을 이용한 상태 업데이트</p>
+</blockquote>
+<p>클래스형 컴포넌트에서는 상태 설정을 위해 state를 사용했지만, 함수형 컴포넌트에는 state가 없습니다.</p>
+<p>대신 useState라는 Hook을 사용합니다. useState는 배열 형태로 사용 가능합니다.</p>
+<p>첫 번째 원소는 현재 상태, 두 번째 원소는 상태를 바꿀 수 있는 함수입니다.</p>
+<p>또한, 클래스형 컴포넌트에서는 this 키워드가 필요했지만, 함수형 컴포넌트는 그냥 바로 변수를 사용하면 됩니다.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span> setNumber<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">// 초기값 0</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token punctuation">{</span>number<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token punctuation">{</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token parameter">prev</span> <span class="token operator">=></span> prev <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>버튼<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
+  <span class="token punctuation">)</span>
+  <span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
+<blockquote>
+<p>props와 이벤트 핸들링, 함수 선언</p>
+</blockquote>
+<p>클래스형 컴포넌트에서는 props를 사용하거나 이벤트 핸들링을 할 때 this를 사용해야 했지만 함수형 컴포넌트에서는 this가 필요 없습니다.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span> setNumber<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">// 초기값 0</span>
+
+  <span class="token comment">// 함수 표현식으로 선언 가능합니다.</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">plusNumber</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token parameter">pre</span><span class="token operator">=></span>pre<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 함수 선언식으로도 선언 가능합니다.</span>
+  <span class="token comment">// function plusNumber(){</span>
+  <span class="token comment">//   setNumber(pre=>pre+1)</span>
+  <span class="token comment">// }</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token punctuation">{</span>number<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span>plusNumber<span class="token punctuation">}</span><span class="token operator">></span>버튼<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
+  <span class="token punctuation">)</span>
+  <span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
+<blockquote>
+<p>LifeCycle</p>
+</blockquote>
+<p>함수형 컴포넌트에서는 useEffect Hook을 사용해서 라이프 사이클을 별도로 구현해야합니다.</p>
+<p>또한 클래스 컴포넌트에서는 컴포넌트르 중심으로 라이프 사이클이 진행되었지만, 함수형 컴포넌트에서는 특정 데이터를 중심으로 라이프 사이클이 진행되는 것이 차이점입니다.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span> setNumber<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'run!!'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>number<span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre></div>
+<p>useEffect 안의 코드는 컴포넌트가 맨 처음 렌더링될 때와 number이라는 state가 변경될 때 마다 실행됩니다.</p>
+<p>componentDidMount와 componentDidUpdate가 합쳐졌다고 볼 수 있습니다.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span> setNumber<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'componentWillUnmount!'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>number<span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre></div>
+<p>return으로 함수를 반환하면 componentWillUnmount 역할을 할 수 있습니다. 컴포넌트가 언마운트 될 때 return의 함수가 실행됩니다.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span> setNumber<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'run!!'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre></div>
+<p>두 번째 인자로 빈 배열을 넣어주면 컴포넌트가 맨 처음 마운트 될 때만 실행됩니다.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Rerendering'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
+<p>두 번째 인자를 넣지 않으면 데이터와 관계 없이 리렌더링할 때마다 실행됩니다.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span> setNumber<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token punctuation">[</span>age<span class="token punctuation">,</span> setAge<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Changed number'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>number<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Changed age'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>age<span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre></div>
+<p>state가 여러 개라면 useEffect를 여러 개 사용하면 됩니다.</p></div><style data-emotion="css 16f2ye1">.css-16f2ye1{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin:0 auto;width:768px;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}@media (max-width: 768px){.css-16f2ye1{width:100%;padding:20px 20px;}}</style><div class="css-16f2ye1 e1bck6a01"><style data-emotion="css 2gag0p">.css-2gag0p{margin-bottom:30px;font-size:20px;}@media (max-width: 768px){.css-2gag0p{font-size:16px;}}</style><div class="css-2gag0p e1bck6a00">Tags</div><ul style="display:flex;flex-direction:row"><a style="font-weight:lighter;font-size:0.8rem;margin-right:1.1rem;padding:4px 15px;cursor:pointer;border-radius:150px;background-color:rgb(255 194 9 / 94%)" href="/?category=React">React</a></ul></div><style data-emotion="css ixzf7k">.css-ixzf7k{padding-top:40px;}@media (max-width: 1140px){.css-ixzf7k{padding:0 20px;}}</style><div class="css-ixzf7k ezj9n950"></div><style data-emotion="css 4zgvna">.css-4zgvna{background-color:rgba(0, 0, 0, 0.9);display:grid;height:75px;place-items:center;maring:0 auto;margin-top:15px;font-size:13px;text-align:center;line-height:1.5;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;color:white;}@media (max-width: 1140px){.css-4zgvna{font-size:9px;}}</style><footer class="css-4zgvna e19z1e6s1"><style data-emotion="css 1ngqshq">.css-1ngqshq{width:1140px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin:0 auto;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-weight:500;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}@media (max-width: 1140px){.css-1ngqshq{width:100%;}}</style><div class="css-1ngqshq e19z1e6s0"><ul style="display:flex;align-items:center;cursor:pointer"><a style="color:#ffff" href="https://github.com/dmchoi77" target="_blank">Github</a><a style="color:#ffff" href="mailto:dm.choi.dev@gmail.com">Contact</a></ul><ul>© 2021 dmchoi, Powered By Gatsby.</ul></div></footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/React/클래스형-컴포넌트-함수형-컴포넌트/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-3f41862614c8bf7171eb.js"],"app":["/app-66f0ec01e30b8b887410.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-cff0d77147d6ee839d36.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-efc42b51c9f50d8f459f.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-d3d5aaf3dc84eedbc043.js"]};/*]]>*/</script><script src="/polyfill-3f41862614c8bf7171eb.js" nomodule=""></script><script src="/component---src-templates-post-template-tsx-d3d5aaf3dc84eedbc043.js" async=""></script><script src="/d0dcf9c1039535d44ee74defc829dfbf62dac3c5-0ed1d7ffb0858beb014d.js" async=""></script><script src="/cb1608f2-40242bba701caad7c6e4.js" async=""></script><script src="/app-66f0ec01e30b8b887410.js" async=""></script><script src="/framework-8d1138a25637f5ba2109.js" async=""></script><script src="/webpack-runtime-76a0cc5197c1b6da3fc2.js" async=""></script></body></html>
