@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://dmchoi77.github.io/sitemap/sitemap-index.xml
+Sitemap: https://dmchoi77.github.io/sitemap-pages.xml
 Host: https://dmchoi77.github.io
