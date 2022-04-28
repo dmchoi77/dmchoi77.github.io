@@ -1,9 +1,50 @@
-<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.e53586a225ffdde20c86.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><meta name="generator" content="Gatsby 4.3.0"/><link rel="canonical" href="https://dmchoi77.github.io/DataStructure/Tree/" data-baseprotocol="https:" data-basehost="dmchoi77.github.io"/><title data-react-helmet="true">[자료구조] 트리(Tree)</title><meta data-react-helmet="true" name="description" content="자료구조 트리(Tree)"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1.0"/><meta data-react-helmet="true" http-equiv="Content-Type" content="text/html;charset=UTF-8"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:title" content="[자료구조] 트리(Tree)"/><meta data-react-helmet="true" property="og:description" content="자료구조 트리(Tree)"/><meta data-react-helmet="true" property="og:image"/><meta data-react-helmet="true" property="og:url"/><meta data-react-helmet="true" property="og:site_name" content="[자료구조] 트리(Tree)"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="[자료구조] 트리(Tree)"/><meta data-react-helmet="true" name="twitter:description" content="자료구조 트리(Tree)"/><meta data-react-helmet="true" name="twitter:image"/><meta data-react-helmet="true" name="twitter:site" content="@사용자이름"/><meta data-react-helmet="true" name="twitter:creator" content="@사용자이름"/><meta data-react-helmet="true" name="google-site-verification" content="PDiP1n57bVVgqNXEDqtRl4nlNIVodByW-1HYmtD_ZXI"/><meta data-react-helmet="true" name="naver-site-verification" content="ac22b6a167833419dfd869c6f560e82a2963ab20"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link as="script" rel="preload" href="/webpack-runtime-76a0cc5197c1b6da3fc2.js"/><link as="script" rel="preload" href="/framework-8d1138a25637f5ba2109.js"/><link as="script" rel="preload" href="/app-66f0ec01e30b8b887410.js"/><link as="script" rel="preload" href="/cb1608f2-40242bba701caad7c6e4.js"/><link as="script" rel="preload" href="/d0dcf9c1039535d44ee74defc829dfbf62dac3c5-0ed1d7ffb0858beb014d.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-tsx-d3d5aaf3dc84eedbc043.js"/><link as="fetch" rel="preload" href="/page-data/DataStructure/Tree/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2184703122.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><script>!function(e,a,o){function d(e){document.body.classList.add(e?"dark-mode":"light-mode"),document.body.classList.remove(e?"light-mode":"dark-mode")}var t=window.matchMedia("(prefers-color-scheme: dark)"),r="(prefers-color-scheme: dark)"===t.media,s=null;try{s=localStorage.getItem("darkMode")}catch(e){}var c=null!==s;if(c&&(s=JSON.parse(s)),c)d(s);else if(r)d(t.matches),localStorage.setItem("darkMode",t.matches);else{var l=document.body.classList.contains("dark-mode");localStorage.setItem("darkMode",JSON.stringify(l))}}();</script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1mj1r1a0"><style data-emotion="css 1ldmrkw">.css-1ldmrkw{width:100%;height:62px;position:fixed;background-color:rgb(230 221 197);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;z-index:999;box-shadow:0px 0px 1px grey;color:rgba(0,0,0,0.8)!important;-webkit-transition:0.4s ease;transition:0.4s ease;}.css-1ldmrkw.hide{-webkit-transform:translateY(-80px);-moz-transform:translateY(-80px);-ms-transform:translateY(-80px);transform:translateY(-80px);}@media (max-width: 768px){.css-1ldmrkw{font-size:13px;width:100%;height:50px;padding:0 20px;}}</style><header class="false css-1ldmrkw e1svho3n3"><style data-emotion="css 2zqvmj">.css-2zqvmj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:768px;height:100%;margin:0 auto;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}@media (max-width: 1140px){.css-2zqvmj{width:90%;}}</style><div class="css-2zqvmj e1svho3n2"><style data-emotion="css 1021nyz">.css-1021nyz{display:none;border:none;background-color:transparent;cursor:pointer;}@media (max-width: 1140px){.css-1021nyz{display:block;}}</style><button class="css-1021nyz e1svho3n1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></button><style data-emotion="css c9pv3r">.css-c9pv3r{font-size:20px;font-weight:800;}@media (max-width: 1140px){.css-c9pv3r{display:none;}}</style><li class="css-c9pv3r e1svho3n0"><a href="/">dmchoi</a></li><div style="display:flex;align-items:center"><li><a href="/">Home</a></li><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="svg-inline--fa fa-sun fa-w-16 mode-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"></path></svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon" class="svg-inline--fa fa-moon fa-w-16 mode-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"></path></svg></div></div></header><style data-emotion="css-global aax5h7">@font-face{font-family:'OTWelcomeBA';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeBA.woff2') format('woff2');font-weight:normal;font-style:normal;}*{padding:0;margin:0;box-sizing:border-box;font-family:'OTWelcomeBA';list-style:none;}html,body,#___gatsby{height:100%;}body.light-mode{color:rgba(0,0,0,0.8);background-color:rgb(255 250 237 / 66%);}body.light-mode a{color:rgba(0,0,0,0.8);}body.dark-mode{color:#fff;background-color:#363636;}a{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}ul a{padding:0 6px;}.mode-icon{height:1.25rem;width:1.25rem;margin-left:1rem;cursor:pointer;color:#ffc500;}</style><style data-emotion="css 1pp2wlr">.css-1pp2wlr{position:relative;width:768px;height:100%;margin:100px auto 0;}</style><div class="css-1pp2wlr e17ggu5u2"><style data-emotion="css 13d1xre">.css-13d1xre{width:768px;}@media (max-width: 768px){.css-13d1xre{width:100%;padding:0px 20px;font-size:28px;}}</style><h1 class="css-13d1xre e17ggu5u1">[자료구조] 트리(Tree)</h1><style data-emotion="css d65hdi">.css-d65hdi{padding:20px 0px;width:768px;}@media (max-width: 768px){.css-d65hdi{width:100%;padding:20px 20px;}}</style><div class="css-d65hdi e17ggu5u0">2022년 04월 07일</div></div><style data-emotion="css i97sjl">.css-i97sjl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:40px 0 30px;word-break:break-all;line-height:1.6;font-size:20px;font-weight:400;}.css-i97sjl p{padding:3px 0;}.css-i97sjl h1,.css-i97sjl h2,.css-i97sjl h3{font-weight:800;margin-bottom:20px;}.css-i97sjl *+h1,.css-i97sjl *+h2,.css-i97sjl *+h3{margin-top:40px;}.css-i97sjl hr+h1,.css-i97sjl hr+h2,.css-i97sjl hr+h3{margin-top:0;}.css-i97sjl h1{font-size:30px;}.css-i97sjl h2{font-size:25px;}.css-i97sjl h3{font-size:20px;}.css-i97sjl blockquote{margin:20px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-i97sjl ol,.css-i97sjl ul{margin-left:20px;padding:10px 0;}.css-i97sjl hr{border:1px solid #000000;margin:100px 0;}.css-i97sjl a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;}.css-i97sjl pre[class*='language-']{margin:20px 0;padding:15px;font-size:15px;}.css-i97sjl pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-i97sjl code[class*='language-'],.css-i97sjl pre[class*='language-']{tab-size:2;}@media (max-width: 768px){.css-i97sjl{width:100%;padding:20px 20px;line-height:1.6;font-size:14px;}.css-i97sjl h1{font-size:23px;}.css-i97sjl h2{font-size:20px;}.css-i97sjl h3{font-size:17px;}.css-i97sjl img{width:100%;}.css-i97sjl hr{margin:50px 0;}}</style><div class="css-i97sjl e1k0w50"><h1>트리</h1>
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.e53586a225ffdde20c86.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><meta name="generator" content="Gatsby 4.3.0"/><link rel="canonical" href="https://dmchoi77.github.io/DataStructure/Tree/" data-baseprotocol="https:" data-basehost="dmchoi77.github.io"/><title data-react-helmet="true">[자료구조] 트리(Tree)</title><meta data-react-helmet="true" name="description" content="자료구조 트리(Tree)"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1.0"/><meta data-react-helmet="true" http-equiv="Content-Type" content="text/html;charset=UTF-8"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:title" content="[자료구조] 트리(Tree)"/><meta data-react-helmet="true" property="og:description" content="자료구조 트리(Tree)"/><meta data-react-helmet="true" property="og:image"/><meta data-react-helmet="true" property="og:url"/><meta data-react-helmet="true" property="og:site_name" content="[자료구조] 트리(Tree)"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="[자료구조] 트리(Tree)"/><meta data-react-helmet="true" name="twitter:description" content="자료구조 트리(Tree)"/><meta data-react-helmet="true" name="twitter:image"/><meta data-react-helmet="true" name="twitter:site" content="@사용자이름"/><meta data-react-helmet="true" name="twitter:creator" content="@사용자이름"/><meta data-react-helmet="true" name="google-site-verification" content="PDiP1n57bVVgqNXEDqtRl4nlNIVodByW-1HYmtD_ZXI"/><meta data-react-helmet="true" name="naver-site-verification" content="ac22b6a167833419dfd869c6f560e82a2963ab20"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link as="script" rel="preload" href="/webpack-runtime-3e9b570c16004247b040.js"/><link as="script" rel="preload" href="/framework-8d1138a25637f5ba2109.js"/><link as="script" rel="preload" href="/app-66f0ec01e30b8b887410.js"/><link as="script" rel="preload" href="/cb1608f2-40242bba701caad7c6e4.js"/><link as="script" rel="preload" href="/d0dcf9c1039535d44ee74defc829dfbf62dac3c5-bfccc4cc943052029067.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-tsx-d3d5aaf3dc84eedbc043.js"/><link as="fetch" rel="preload" href="/page-data/DataStructure/Tree/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2184703122.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><script>!function(e,a,o){function d(e){document.body.classList.add(e?"dark-mode":"light-mode"),document.body.classList.remove(e?"light-mode":"dark-mode")}var t=window.matchMedia("(prefers-color-scheme: dark)"),r="(prefers-color-scheme: dark)"===t.media,s=null;try{s=localStorage.getItem("darkMode")}catch(e){}var c=null!==s;if(c&&(s=JSON.parse(s)),c)d(s);else if(r)d(t.matches),localStorage.setItem("darkMode",t.matches);else{var l=document.body.classList.contains("dark-mode");localStorage.setItem("darkMode",JSON.stringify(l))}}();</script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1mj1r1a0"><style data-emotion="css 1ldmrkw">.css-1ldmrkw{width:100%;height:62px;position:fixed;background-color:rgb(230 221 197);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;z-index:999;box-shadow:0px 0px 1px grey;color:rgba(0,0,0,0.8)!important;-webkit-transition:0.4s ease;transition:0.4s ease;}.css-1ldmrkw.hide{-webkit-transform:translateY(-80px);-moz-transform:translateY(-80px);-ms-transform:translateY(-80px);transform:translateY(-80px);}@media (max-width: 768px){.css-1ldmrkw{font-size:13px;width:100%;height:50px;padding:0 20px;}}</style><header class="false css-1ldmrkw e1svho3n3"><style data-emotion="css 2zqvmj">.css-2zqvmj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:768px;height:100%;margin:0 auto;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}@media (max-width: 1140px){.css-2zqvmj{width:90%;}}</style><div class="css-2zqvmj e1svho3n2"><style data-emotion="css 1021nyz">.css-1021nyz{display:none;border:none;background-color:transparent;cursor:pointer;}@media (max-width: 1140px){.css-1021nyz{display:block;}}</style><button class="css-1021nyz e1svho3n1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></button><style data-emotion="css c9pv3r">.css-c9pv3r{font-size:20px;font-weight:800;}@media (max-width: 1140px){.css-c9pv3r{display:none;}}</style><li class="css-c9pv3r e1svho3n0"><a href="/">dmchoi</a></li><div style="display:flex;align-items:center"><li><a href="/">Home</a></li><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="svg-inline--fa fa-sun fa-w-16 mode-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"></path></svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon" class="svg-inline--fa fa-moon fa-w-16 mode-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"></path></svg></div></div></header><style data-emotion="css-global 1x5nfa9">*{padding:0;margin:0;box-sizing:border-box;font-family:'OTWelcomeBA';list-style:none;}html,body,#___gatsby{height:100%;}body.light-mode{color:rgba(0,0,0,0.8);background-color:rgb(255 250 237 / 66%);}body.light-mode a{color:rgba(0,0,0,0.8);}body.dark-mode{color:#fff;background-color:#363636;}a{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}ul a{padding:0 6px;}.mode-icon{height:1.25rem;width:1.25rem;margin-left:1rem;cursor:pointer;color:#ffc500;}</style><style data-emotion="css 1pp2wlr">.css-1pp2wlr{position:relative;width:768px;height:100%;margin:100px auto 0;}</style><div class="css-1pp2wlr e17ggu5u2"><style data-emotion="css 13d1xre">.css-13d1xre{width:768px;}@media (max-width: 768px){.css-13d1xre{width:100%;padding:0px 20px;font-size:28px;}}</style><h1 class="css-13d1xre e17ggu5u1">[자료구조] 트리(Tree)</h1><style data-emotion="css d65hdi">.css-d65hdi{padding:20px 0px;width:768px;}@media (max-width: 768px){.css-d65hdi{width:100%;padding:20px 20px;}}</style><div class="css-d65hdi e17ggu5u0">2022년 04월 07일</div></div><style data-emotion="css i97sjl">.css-i97sjl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:40px 0 30px;word-break:break-all;line-height:1.6;font-size:20px;font-weight:400;}.css-i97sjl p{padding:3px 0;}.css-i97sjl h1,.css-i97sjl h2,.css-i97sjl h3{font-weight:800;margin-bottom:20px;}.css-i97sjl *+h1,.css-i97sjl *+h2,.css-i97sjl *+h3{margin-top:40px;}.css-i97sjl hr+h1,.css-i97sjl hr+h2,.css-i97sjl hr+h3{margin-top:0;}.css-i97sjl h1{font-size:30px;}.css-i97sjl h2{font-size:25px;}.css-i97sjl h3{font-size:20px;}.css-i97sjl blockquote{margin:20px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-i97sjl ol,.css-i97sjl ul{margin-left:20px;padding:10px 0;}.css-i97sjl hr{border:1px solid #000000;margin:100px 0;}.css-i97sjl a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;}.css-i97sjl pre[class*='language-']{margin:20px 0;padding:15px;font-size:15px;}.css-i97sjl pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-i97sjl code[class*='language-'],.css-i97sjl pre[class*='language-']{tab-size:2;}@media (max-width: 768px){.css-i97sjl{width:100%;padding:20px 20px;line-height:1.6;font-size:14px;}.css-i97sjl h1{font-size:23px;}.css-i97sjl h2{font-size:20px;}.css-i97sjl h3{font-size:17px;}.css-i97sjl img{width:100%;}.css-i97sjl hr{margin:50px 0;}}</style><div class="css-i97sjl e1k0w50"><h1>트리</h1>
 <blockquote>
 <p>노드들이 나무 가지처럼 연결된 비선형 계층적 자료 구조</p>
 </blockquote>
 <br>
-<p><img src="./img/tree1.png" alt="tree1"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 614px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/802502d5887a49fb3aaf8707bb9021a6/c42f5/tree1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 70.3125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAPoAAAD6AG1e1JrAAADaklEQVQ4y5WUbWxTdRTGnzvwJdEEiR+sQSUxbIJZ19v/vfKtHbJBpks2oQw3ZwPbsg1WWMM0KuXFlanoDCbGhASFxVVG196Xtrebk71P19GAkqAYQyaGRNjYEoPutW/rMbcIH/TD4pM8Od9+Oed/nvMH/qWTHf0o7CO89DWhPhRHXSgFIiB8fhgHg5P436LWp2HrIW5HF2FPcLGoLpQsN3xJQDPhqPobeJ6H2Wy+X/Py8mA0GmEymf4L83g82CPfySpr/wOvtE0bD/enqGUkTa91zpVulwjHwjdXaprGqarKERFycnIgiiLHGON0qA7P6IOzF+HU5rFfW4BDuZNV8P73KD01scbVm5hwDy0ly70LrEX+GRSoRCAUhqaF4HA4MgBRFMEYQ25ubqbTjHYrCTQE5tAQnIc9QGiSJ3HVe2h1s/+n7EbvjfVR5VPD9e4ThgGtM9svq7ljYxHearUynucrGGM7GGMvmkymB+6PXaXE0KDOYG9gHk3K7Ueq5MXi08rgBod/Cm/ItyD5fNlN6lSFW7323EL3Ww9Fr954+AVRXGU2m58VBGETY+x5i8UCm812F7hfmsKbEco6MELYF07IH42mydmdbHvvEsHuX0S1NHvw+HdEb/ctRW317kcvRceesVjz1/I8v1EQhKfMZjMTRXGVPj6IA2o9v8M1kF7ZMkpwdsWVTy6kqbE72eaOEsr9KR3oah1Nk6sv9UO968TqC5Fv11msm3RgiSAIxYyxMsbYWv0tsUUhVCpprsY7DYNK+EIZMtao8ZfPqIMbHL7bePXcLC5/9SG3S04U1kgzBufZa7gyEkRB4ZZMdARByCxFr7qxVSJuq0zIb6cnj/suGilkefCYOo5ffIcea/ZeWW/10BOlnYRqJY5aeQ6NHb9yPw6r3D9AThCEe74L3CXHsFtayD86uJQ+0p+6XvD5zOObP7uJ4lMTa470Jybdw0uLld5Zcac3hsZwfIWzh3DgPIEXNmbCrHenB/ye8bqUhF2K2z+OpDMhLjr917pt7X+i5My06d2hFLVG0lRxbr6kUkpiX1dyxbKnNt7bDrQRqtWkvS4Y27xdJpRplLUzc3qxorpQojy7g4BhwmF5fPnbPdkzjsu9EqrUFGqDCRT5iSsOE7Z9Q9gbiqNeS2Y+h/bQAN4J3FoW+DcguKKtepNwyQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/802502d5887a49fb3aaf8707bb9021a6/a59e9/tree1.webp 192w,
+/static/802502d5887a49fb3aaf8707bb9021a6/0ca9f/tree1.webp 384w,
+/static/802502d5887a49fb3aaf8707bb9021a6/e44cf/tree1.webp 614w"
+              sizes="(max-width: 614px) 100vw, 614px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/802502d5887a49fb3aaf8707bb9021a6/3b721/tree1.png 192w,
+/static/802502d5887a49fb3aaf8707bb9021a6/66595/tree1.png 384w,
+/static/802502d5887a49fb3aaf8707bb9021a6/c42f5/tree1.png 614w"
+            sizes="(max-width: 614px) 100vw, 614px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/802502d5887a49fb3aaf8707bb9021a6/c42f5/tree1.png"
+            alt="tree1"
+            title="tree1"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <br>
 <h2>트리의 구성요소</h2>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">-노드(Node) : 트리를 구성하고 있는 각각의 요소
@@ -36,24 +77,188 @@
 <h2>이진트리 (Binary Tree)</h2>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">-모든 노드들이 최대 2개의 자식 노드를 가진 트리(자식 노드가 없거나 1개여도 가능)</code></pre></div>
 <br>
-<p><img src="./img/tree2.png" alt="tree2"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 576px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8ac2f8af8fa4b7a8f06cfe7a0df21dfe/694da/tree2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAADOklEQVQ4y5WTTWxUVRiG35kWU4MLIWxcURfEhUQ2hqDWUFEhKp0W+sPM0L+pM/2jaaqg7dAmU41/ELAxCjFGqVgtnc6dO/eeubfTMgwtRcCEEKNGN9CFxhgTm6DVFNJOv9ec6cKVCmd1kvOd53znOe8B/mV0uARKicc+JupNojEleOAYMfod0eEQdz263DzKTxN74kRTSspDluzaPUrgOaLTkbsHdrj07jMIvyHbY9PkwHmyPim+oCEa6L1jUKcrqHdZANaOE3UJlsemha9fIANJVtYkiHaXRc3uHXSq3Whfew3iVO6Gd+iLLHJqbMPLaqHuUHqhIZM21x8/M4P47HVvjbFa+58+9WKDSVQZxIez8wie+Pq+y/YnG7ucZVRmCD1/4sgPJeqbm6j+P6Bt2zjgrODp4WWUnZgv6s7wZDSb/7E7fWtn1P4Vg+YcetSfT0az+bmeSY74Pr9dUh1fKVxb7/3HmUOEXeJo+joiLj1VCeKFMZa+miVPXiUjip81WkRVXEeHQ+99RQ7OkM+PcktFnGh16X0nPYe2glMCbQ4RUVJ4hD73j2LDSGIkbq0/PLk4HD0n34YVtzZbRMgmwoqbe7NyrTdza/yDxOy6YTOHPvf34s4JFrWqFUQUge9/I3CQ2J8ieuwFOFZy3YRKlYIEw1gzoH7BG/ac9y37hjemfga7UMx2eDPKeDBtW2v73AX96giZS6vAZ04LfGNEk8U9rfZyezI99VCfcxM9zuKubrUYC0xwbXCCqM4QlVO8p9NaPHxA3fZtS1G729Tl5pvbHfpfdApKAL+hsyZl2suRL4X7k9Kw+SPe25vl0tAVMqzkuP52OtAtlvQfvUT258jtI9zQaOZ9r80I375IBgzZvS9B6OCidpxbBqflrzdnyXqTFQ+/v7Tm0Fn5SR8QUextsVfj1GKz7d3Lwv6czO/4NH9/k8Wy6DnylbOSD1ksC1mEhnk02W/wEb8hj287pTeK/r8bAwafRS1xcIoYukLsHCFqxvlUMCmbgklBwCRClmwNWXy0KVU41IOKUcHeuBSgtbrlAV1Ej/ZRlxAcuyR4aZKITRMooa5FoKCJqDyz6k2nIJCkpzpO/A2zrRdKkXSP2gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/8ac2f8af8fa4b7a8f06cfe7a0df21dfe/a59e9/tree2.webp 192w,
+/static/8ac2f8af8fa4b7a8f06cfe7a0df21dfe/0ca9f/tree2.webp 384w,
+/static/8ac2f8af8fa4b7a8f06cfe7a0df21dfe/f1c97/tree2.webp 576w"
+              sizes="(max-width: 576px) 100vw, 576px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/8ac2f8af8fa4b7a8f06cfe7a0df21dfe/3b721/tree2.png 192w,
+/static/8ac2f8af8fa4b7a8f06cfe7a0df21dfe/66595/tree2.png 384w,
+/static/8ac2f8af8fa4b7a8f06cfe7a0df21dfe/694da/tree2.png 576w"
+            sizes="(max-width: 576px) 100vw, 576px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/8ac2f8af8fa4b7a8f06cfe7a0df21dfe/694da/tree2.png"
+            alt="tree2"
+            title="tree2"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <br>
 <h2>편향 이진 트리(Skewed Binary Tree)</h2>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">-하나의 차수로만 이루어져 있는 트리
 -배열 또는 리스트와 같은 선형 구조이기 때문에 leaf node 탐색시 모든 데이터를 탐색해야하기 때문에 효율적이지 못하다.</code></pre></div>
 <br>
-<p><img src="./img/tree3.png" alt="tree3"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 656px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/1a1e126199828b5f4cd88420a7929451/5ad6b/tree3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 65.625%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACpklEQVQ4y4WT20tUURTGv5POW+SDFeJ/4EPgq0EPRWEh+NBNvD2Yms6Y4yXvjkFNSpYlQQiZIZrdmBmbOZ7jOeN4x5CQQK2nDHwNCx9EHXKc/cU+U5ImuWBz1jnf4rf3+fZawJ5w6IRdi63aEVrvpRrRMi5QZRK3J4lKU2rC0g8Mhy4Uuybg0ESK0xDddo1pElgzQjgNptWFRHeFIVKqTLmBUP4LU1UVjmHGFw8RJRr77s2Q5cNipj4k0DQm4DTEjPxm19nnGCbKDcYHAoF/QXadONdP4AHRFAzbqnzfUDO0dqlpNLrgNJhdH4r9ukNndrUZXZCarGk0wzY8JNJfxCzaBTw/QMBN3Amt48gPYkltP+aZX0f1CPFqYQs3jS3Yh4nO6XVLO/w9VotW4sJLWoydKNOi1nNpi9L45obgT0/14MrxvK55NBgbcW8WI2gZi6BG34gr752H1GRNpcnmL1sSdHqHgUSTKNWpZLwmTvUyyTVOSp+yfczM9lk7x+XphFwyv+olrniY2TlL3p0mU58y6Ux/jHHUJHDNvw2nunHoKwn3M9XmCm521I+yJ8cTScj1RVGmC+uypPkyzx+MIt8bSagNsac5uNnR/ly1LZIWo9C/DRS821ZyA8TAh1V89rUl8gSUx9NrOPuWyPLELuPvHs3xEekeonNqDTwJ5ZO3LdH7cRV5KlEUiCooDBBFKlMbR8VcvRl2dY6toG0qYrvoIbK8+wMv+4jWyYjtycQKGsywq3lMzBWrTC1SCRT4BQoDwn3/PdkwymWSkGvH5H1Can/q6kJcfjRLFqnCXRgQsMaqVGNyTVB0OQ2RISei0qRyELBUo1Jm9abIuKGLrutDTLZOWCKnYoi4NUFUB4nW6Vi+q1H3DsLvWZezLaEVhmUbCvzEL0UL12lRAiPcAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/1a1e126199828b5f4cd88420a7929451/a59e9/tree3.webp 192w,
+/static/1a1e126199828b5f4cd88420a7929451/0ca9f/tree3.webp 384w,
+/static/1a1e126199828b5f4cd88420a7929451/0ccf2/tree3.webp 656w"
+              sizes="(max-width: 656px) 100vw, 656px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/1a1e126199828b5f4cd88420a7929451/3b721/tree3.png 192w,
+/static/1a1e126199828b5f4cd88420a7929451/66595/tree3.png 384w,
+/static/1a1e126199828b5f4cd88420a7929451/5ad6b/tree3.png 656w"
+            sizes="(max-width: 656px) 100vw, 656px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/1a1e126199828b5f4cd88420a7929451/5ad6b/tree3.png"
+            alt="tree3"
+            title="tree3"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <br>
 <h2>포화 이진 트리(Full Binary Tree)</h2>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">-Leaf Node를 제외한 모든 노드의 차수 2 또는 0인 트리
 -해당 레벨에 몇 개의 노드가 존재하는지 바로 알 수 있기 때문에 노드의 개수를 파악할 때 용이</code></pre></div>
 <br>
-<p><img src="./img/tree4.png" alt="tree4"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 416px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4305a4ee20d1ddaf926693e53034e48b/5d0f3/tree4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 134.375%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAbCAYAAAB836/YAAAACXBIWXMAABYlAAAWJQFJUiTwAAAFHElEQVRIx5VWa2wUVRQ+M9sStYQ/9Q+JQRIjISoIKjGRaKIkgAlqkAQo0Ha728fOdvuAQh8CRbGIGB+IYBACgigU2t2ZO3Nn27JtU9oGBHmIP5BIwNAYARUxiMV22/OZmdmmmFbFSc6vyf3Ouef7zncu0b98mg0Kp0KzWdVs+DSbfZqEoknQUNz1F7a8AyVxVkrioCVRUJ4ALW8GlTZ5/5xkdw8o2TmkROKgSBzTggL1hRbeWdHCGSlA5X8DFlqgmlZkFJh8aVM3o7qVkW/ylhydKey04W6vLIRwAJWwHKRVLYMTAgIDu88guakbyDPQNudzUMiG4iT9j6rgknHW2Eyz46A62aNWxK5Ssdm3raaVUXV4oDcoBufmG/0UkUm1zurxejkaQUOsapLd7NXyRhp2E9lG49g2s37KnEOYVBu98ORX5o4He8z1tE5eTSuyoWper0cCDmVxGC1r8Vj1R/8kKWJP7Bet4yLR67Q6eokaRdOMi/r6sVrjr7REB927AbT52D8DuhJZ1ZLMyDUQCeu31hyQRybvlKeozupJpy4QdpKy2Tr3craO2oDgV+bXgyhjVECmSJyVpVGmQpPra9sZb3QwAgLb5x4A5dtQs0xQgY3MkOSet7sZlQkgIDgrV3cB1RGAYWuA3u1O3hMQ+Hn7SeCzs4Df4MvmeR4Ttt1EFLH5uUILkN/h5ntHGcti2PPqQbf/vr/JZL4NqrJvqiH9Dyo0B99/8whjTTsjKFDr9DNss8+ZFE3iPk3y0dc7GCta0B8QPCvPSFWo2Z5MIvYAReSAusyGL9gJarJi07Kjg/NKjd8WJqyGhxusVlorr6UXSfhSjI7L0ZGVZ2Cqc91FjaCQDnKyUnUraJkOWmqCqvUfyRRisi7kxJWxK1QW+4V0YU23ROz+Cv0nWqyD8gyojrycqnN0UHaMlXn7QZrpAoJ2nQFlG6ACC89qRm9WzIxP+1Ceoxp5PY0OQ+lryPE1Wi0zcg0syDfxjAOS45LAvrCEqll3OI9mQy2yQCHJkWIbqEowiiR2B2J9VCKTykbre0Xbd5FC1mBsdZvbMxSY7A8KdkhUR5sOZfY+UEDg9JYvGYmL6A8K3F51mB9wJ8YcoJUtgxODAtC/xe2tJxg5OnfN3OWaw8hZDttQ801QkcUbqxLAW52MIosTJ34AlSdAcG7R6dyCj9W5rDsyQtWCRlePaoW85SpkuEIJKm8GfXAMakAgmKujsjTOmY4Hlsikb44NdUYTaId18gW/QOVy40ZlsxTjD8l2WievpBXaUIY9AB5gWROoMsGUa4AWN3qzXGTBt8gEbTAuOLM7pUPsHV+pX6XHo3AqerrBSqQHGn6nlw55rDskuWY7vBvYVboTeQYUvwnKk3ioRlyb3iU+nXRafEwbZE86ok9Ru/gi0xTGoy8exGMLDyYzc1PScSToAaX8LGUOaqHHeolmI1kWH0BYDhSWWrepRPb7nJ46UWb3mWvbGRUtuOw3eGpqlpURblNggrYe5zEBgSt7vmbsOOWScKH5fF9akdsK10BmFljA/m/QW9fJyNWx02lVWN4xy0MEvdYGen4vKN/kjo+OA1uOM/IMth7ZxlTs7hDXHCaGJPdu7GJE4kBIclnIa5tvVD8sttkhZoLfwC6/gU+WN2N8+fCWU4o9Vmflm9BDkqvXtnkeOqofOpkicSjOmlzU4IWzh8ubh5d7cQp0adRVg/t/VEAttaBSB5Uh1u98KXgvCR5+SQy7j0vwX3LwAiHyW8ytAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/4305a4ee20d1ddaf926693e53034e48b/a59e9/tree4.webp 192w,
+/static/4305a4ee20d1ddaf926693e53034e48b/0ca9f/tree4.webp 384w,
+/static/4305a4ee20d1ddaf926693e53034e48b/67d05/tree4.webp 416w"
+              sizes="(max-width: 416px) 100vw, 416px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/4305a4ee20d1ddaf926693e53034e48b/3b721/tree4.png 192w,
+/static/4305a4ee20d1ddaf926693e53034e48b/66595/tree4.png 384w,
+/static/4305a4ee20d1ddaf926693e53034e48b/5d0f3/tree4.png 416w"
+            sizes="(max-width: 416px) 100vw, 416px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/4305a4ee20d1ddaf926693e53034e48b/5d0f3/tree4.png"
+            alt="tree4"
+            title="tree4"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <br>
 <h2>완전 이진 트리(Complete Binary Tree)</h2>
 <p>마지막 레벨을 제외하고 모든 레벨이 완전하게 채워져 있는 이진 트리로 모든 노드가 왼쪽부터 차례대로 채워져야한다.</p>
 <br>
-<p><img src="./img/tree5.png" alt="tree5"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 456px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4cb3a9aeb51b4861106e5523c2b2227d/b87a0/tree5.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 94.79166666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAADxklEQVQ4y51Ub2hVZRh/zj0L7Z9SQvRlEtGHHIKhfYg+BJF+CT+MUYE2173b/b+7P7pNzeU0cWsRCjUjrYW1Ebg/997zvuc9Z3fubqu5iRNFqMhVYEssxgpdZtvIzvOL91wrotDswMs5nN/7/J7n+T1/iG7xJBQo6YCqBCiuEDj9HWhrjo2oDSNms4/f1pPUhMon841rXFC1U/j+49w+ocOBpMP6/WxC8emEwpGkw3cmnf9FyEZCMb0yzPdEJF/qmAR25RlBixuCWda4+Z/JhBB+BFEFen2cl1YKfP7mKUbLKFCeQWRTBhR3YOp7N4/KKYhdpVNyYMQdFNU7i9Smpp9POOhpUlc7emT+7lPiXWpQ18y4cws9dYoVWVCFBWNDP6gpfYnSwl05ITqLD7gXCL0lS4QQq1sz56m0D1SVXihkYvNNCY0KC/RcPx54sXdhbU72l6ihMdozcNlEZj1NyKMr92emSjb2ooQ+LFQ+auPfddNVrRJMYeGtqc9hpnnYQ8L2DtaKn2mrWiiKil+pSngljbnrl1/OA3HFb2mybYMw/kGmT8yBuTkLCgq8tnsEyJ4HIhJXGge9FfvERV+OkMDu5hFATvFvKRdeeYbv25zGX5MQc0A71Bx9Zh2gvfb3ZlN2hlLZnzbuynvYPwZEJXeXHfN09GbIYqoU/ETDIBb2fgwkHe5rGfHo8BkQJf+sEOtqmi1qtmhYfEQZoVackF2PbLdmn67NzlWumkRgS65wN56dN+rEVUqJa+sasj+kVlu4o0yCopINvwB1AzC25Zh0X9Vm52jY6r5XSPvxSbebkCMTZ8g8qL6mNnXR1ISzo28TjsfoLguEXPHydvUNtapvTT2e2qNRnwM1HfeWhSw0h4W3vc/Or0P3M4GO9EmqtedrquXi4aiL4qhb6MuyI9MU779CcXk9lJLzH8RcPBRz/egNnbLxgu4lwZ1aj9Yxf6zag+lFClneSzvzwBsndVF4wppCIOkgEJas75c1DMLXN2bzubYTMIMWiHbmQY8eAgUtjHeeZbx3FtiSgVXa4//bt2eUkf6CEZaY2THEy7XmOoDyDBrbxxn2l4yEg19CFi/b1M9+ytqrrt5TcYWvqh3+NKH4Mb3rIpIfrHF5qG6AZ+IKFTdWmBmRoIjE/SkXTt0AZpMOwrqxUy6Mv+21ugEUrTqEQMz2DQJhCRq+AHryfSzRjftwh6+hxgyNHT3nY0v9sZNMweyNttEeYzYCpcdAa95hitgFA2344zxoQ1cBf3W0QKixsITxyTRofZcfTEA71Fv9d4dIvtrJ1K4+AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/4cb3a9aeb51b4861106e5523c2b2227d/a59e9/tree5.webp 192w,
+/static/4cb3a9aeb51b4861106e5523c2b2227d/0ca9f/tree5.webp 384w,
+/static/4cb3a9aeb51b4861106e5523c2b2227d/67246/tree5.webp 456w"
+              sizes="(max-width: 456px) 100vw, 456px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/4cb3a9aeb51b4861106e5523c2b2227d/3b721/tree5.png 192w,
+/static/4cb3a9aeb51b4861106e5523c2b2227d/66595/tree5.png 384w,
+/static/4cb3a9aeb51b4861106e5523c2b2227d/b87a0/tree5.png 456w"
+            sizes="(max-width: 456px) 100vw, 456px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/4cb3a9aeb51b4861106e5523c2b2227d/b87a0/tree5.png"
+            alt="tree5"
+            title="tree5"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <br>
 <h2>이진 탐색 트리(Binary Search Tree)</h2>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">이진 탐색 트리는 다음과 같은 특징을 가진 자료구조이다.
@@ -62,7 +267,52 @@
   -루트 노드의 오른쪽 서브트리는 해당 노드의 값보다 큰 값의 노드들로 이루어져 있다.
   -좌우 서브트리도 모두 이진 탐색 트리여야한다.</code></pre></div>
 <br>
-<p><img src="./img/tree6.png" alt="tree6"></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7f01c27c6f88329f8ffbe5cb7d71d4d4/a2906/tree6.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 61.45833333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAPoAAAD6AG1e1JrAAADaUlEQVQoz1WRa0xbdRjGn9PSChLTLTqNYyFCD6VSKB1tgUIRR0+hy4KdNKNAg35wGcbVGXDRTXcp47KWstKVsbFLcSYaY/yyDyoZ3RI/iEs0ZjFmU4mXuUzAIefSntMeiPg3rWbJnuR5P/2e503eFwAQ1WdAQCDlJsFvIPgYRL3XcAeu/ttQfDIHEADkC1TFv8XLvfdwnE7hIxD1MgiVzSz8n80pWp9CqJ3HiEXIO9LE4qSRr5qoExMDT97NzzLHmv5SBNt5vPnsKg6a/6SuPU4U3/QRTNSKn42ZhaYTDIdTzcm8iIcHnvhuHiNODu/6VqghG4erIHAevr31gG6xrujrG5oZUwahFg7jLoHym+8jUCRgslIEyFzhgfLF2hf2/1T8KwjCu3iE93AUTvo3EKmTVNFWEacr0z2hhtTxWZqgzXwLiH+ujrVIl85aJdNMwxreKmYxviVdGqkX43s8v2s8xp9x1UAw7kwOnLOn91/aIQOB/nWEGkXMg2Cgcdl1yHK/K3uLaFMa4RsCgtXs3lHTaumYVcCkRobvxTv0UdOKvz74/aYpo4xTLTyClWxrsIZ1jVlZYLqRYMKY8fXvXKm7rN5AtDyFvpf+0EYt6X0TW5cVsUYBZyxpxAwZ22BDsju7zO8kAImrwzapb6oq88wZq4jY8wLOtaUoDGklDJZw0aNbOCZQmsRIbQpv2JeMwxXc+ycKllRRRlIO64Qs4wtsY49FjbdA3NmPv00NVrKXR7VczUiJgHELr5zemQQ+dBFEjBJiJWu4UL5RdGS3YARpV4aak7gIDpvwHs7aM1SwegMzZQv4e1tH4Uq9p8b+6ZXNF/UiRm1phHcI1GRtGq+q7gEfOAgi20XVpD2Fsark6yEzHwvt+wVxG8k76PwSBQhgqiGDr/TTSqLT4J8yp2H9uZ5ZabM5n9iBhPW84nzzDzhtkfBA1bgJK+ZhwpwKIArfgrvAE3+N8l7zwZvozTFprQOLxc24q3OCUPrCTBmjWTW05bGGNgj6VjwkBj+iY+gdqmP4MLpu7n7aO+fb1TnbC2/Cl3NWspaBRP9nfrv7kTUtc0imHU/JtAMyzVAPFfrzl+Ber4B7rQJdV155tPN6d0Hn9W50JnrgTXTnmHUtg1SZE7yOQYZmFDLteEzWMkqZZrKFD8r+BUH1dzesD14VAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/7f01c27c6f88329f8ffbe5cb7d71d4d4/a59e9/tree6.webp 192w,
+/static/7f01c27c6f88329f8ffbe5cb7d71d4d4/0ca9f/tree6.webp 384w,
+/static/7f01c27c6f88329f8ffbe5cb7d71d4d4/dc9b9/tree6.webp 768w,
+/static/7f01c27c6f88329f8ffbe5cb7d71d4d4/e2c2f/tree6.webp 1152w,
+/static/7f01c27c6f88329f8ffbe5cb7d71d4d4/a69b9/tree6.webp 1460w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/7f01c27c6f88329f8ffbe5cb7d71d4d4/3b721/tree6.png 192w,
+/static/7f01c27c6f88329f8ffbe5cb7d71d4d4/66595/tree6.png 384w,
+/static/7f01c27c6f88329f8ffbe5cb7d71d4d4/fe486/tree6.png 768w,
+/static/7f01c27c6f88329f8ffbe5cb7d71d4d4/d2d74/tree6.png 1152w,
+/static/7f01c27c6f88329f8ffbe5cb7d71d4d4/a2906/tree6.png 1460w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/7f01c27c6f88329f8ffbe5cb7d71d4d4/fe486/tree6.png"
+            alt="tree6"
+            title="tree6"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <br>
 <h2>이진 탐색 트리 시간 복잡도</h2>
 <p>이진 탐색 트리에서의 검색, 삽입, 삭제는 결국 트리를 순회하며 타겟 데이터의 위치를 찾는 연산이 공통적으로 필요하므로 트리의 높이에 비례하여 시간 복잡도가 증가하게 된다.</p>
@@ -79,4 +329,4 @@
 <blockquote>
 <p>H = log(N + 1) - 1 </p>
 </blockquote>
-<p>이를 일반적인 Big-O 시간 복잡도로 표현하자면 위 식을 간소화한 O(logN)으로 표현할 수 있는 것이다.</p></div><style data-emotion="css 16f2ye1">.css-16f2ye1{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin:0 auto;width:768px;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}@media (max-width: 768px){.css-16f2ye1{width:100%;padding:20px 20px;}}</style><div class="css-16f2ye1 e1bck6a01"><style data-emotion="css 2gag0p">.css-2gag0p{margin-bottom:30px;font-size:20px;}@media (max-width: 768px){.css-2gag0p{font-size:16px;}}</style><div class="css-2gag0p e1bck6a00">Tags</div><ul style="display:flex;flex-direction:row"><a style="font-weight:lighter;font-size:0.8rem;margin-right:1.1rem;padding:4px 15px;cursor:pointer;border-radius:150px;background-color:rgb(255 194 9 / 94%)" href="/?category=자료구조">자료구조</a></ul></div><style data-emotion="css ixzf7k">.css-ixzf7k{padding-top:40px;}@media (max-width: 1140px){.css-ixzf7k{padding:0 20px;}}</style><div class="css-ixzf7k ezj9n950"></div><style data-emotion="css 4zgvna">.css-4zgvna{background-color:rgba(0, 0, 0, 0.9);display:grid;height:75px;place-items:center;maring:0 auto;margin-top:15px;font-size:13px;text-align:center;line-height:1.5;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;color:white;}@media (max-width: 1140px){.css-4zgvna{font-size:9px;}}</style><footer class="css-4zgvna e19z1e6s1"><style data-emotion="css 1ngqshq">.css-1ngqshq{width:1140px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin:0 auto;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-weight:500;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}@media (max-width: 1140px){.css-1ngqshq{width:100%;}}</style><div class="css-1ngqshq e19z1e6s0"><ul style="display:flex;align-items:center;cursor:pointer"><a style="color:#ffff" href="https://github.com/dmchoi77" target="_blank">Github</a><a style="color:#ffff" href="mailto:dm.choi.dev@gmail.com">Contact</a></ul><ul>© 2021 dmchoi, Powered By Gatsby.</ul></div></footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/DataStructure/Tree/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-3f41862614c8bf7171eb.js"],"app":["/app-66f0ec01e30b8b887410.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-cff0d77147d6ee839d36.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-efc42b51c9f50d8f459f.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-d3d5aaf3dc84eedbc043.js"]};/*]]>*/</script><script src="/polyfill-3f41862614c8bf7171eb.js" nomodule=""></script><script src="/component---src-templates-post-template-tsx-d3d5aaf3dc84eedbc043.js" async=""></script><script src="/d0dcf9c1039535d44ee74defc829dfbf62dac3c5-0ed1d7ffb0858beb014d.js" async=""></script><script src="/cb1608f2-40242bba701caad7c6e4.js" async=""></script><script src="/app-66f0ec01e30b8b887410.js" async=""></script><script src="/framework-8d1138a25637f5ba2109.js" async=""></script><script src="/webpack-runtime-76a0cc5197c1b6da3fc2.js" async=""></script></body></html>
+<p>이를 일반적인 Big-O 시간 복잡도로 표현하자면 위 식을 간소화한 O(logN)으로 표현할 수 있는 것이다.</p></div><style data-emotion="css 16f2ye1">.css-16f2ye1{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin:0 auto;width:768px;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}@media (max-width: 768px){.css-16f2ye1{width:100%;padding:20px 20px;}}</style><div class="css-16f2ye1 e1bck6a01"><style data-emotion="css 2gag0p">.css-2gag0p{margin-bottom:30px;font-size:20px;}@media (max-width: 768px){.css-2gag0p{font-size:16px;}}</style><div class="css-2gag0p e1bck6a00">Tags</div><ul style="display:flex;flex-direction:row"><a style="font-weight:lighter;font-size:0.8rem;margin-right:1.1rem;padding:4px 15px;cursor:pointer;border-radius:150px;background-color:rgb(255 194 9 / 94%)" href="/?category=자료구조">자료구조</a></ul></div><style data-emotion="css ixzf7k">.css-ixzf7k{padding-top:40px;}@media (max-width: 1140px){.css-ixzf7k{padding:0 20px;}}</style><div class="css-ixzf7k ezj9n950"></div><style data-emotion="css 4zgvna">.css-4zgvna{background-color:rgba(0, 0, 0, 0.9);display:grid;height:75px;place-items:center;maring:0 auto;margin-top:15px;font-size:13px;text-align:center;line-height:1.5;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;color:white;}@media (max-width: 1140px){.css-4zgvna{font-size:9px;}}</style><footer class="css-4zgvna e19z1e6s1"><style data-emotion="css 1ngqshq">.css-1ngqshq{width:1140px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin:0 auto;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-weight:500;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}@media (max-width: 1140px){.css-1ngqshq{width:100%;}}</style><div class="css-1ngqshq e19z1e6s0"><ul style="display:flex;align-items:center;cursor:pointer"><a style="color:#ffff" href="https://github.com/dmchoi77" target="_blank">Github</a><a style="color:#ffff" href="mailto:dm.choi.dev@gmail.com">Contact</a></ul><ul>© 2021 dmchoi, Powered By Gatsby.</ul></div></footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/DataStructure/Tree/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-3f41862614c8bf7171eb.js"],"app":["/app-66f0ec01e30b8b887410.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-2a0793ce8e0ce3816b65.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-efc42b51c9f50d8f459f.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-d3d5aaf3dc84eedbc043.js"]};/*]]>*/</script><script src="/polyfill-3f41862614c8bf7171eb.js" nomodule=""></script><script src="/component---src-templates-post-template-tsx-d3d5aaf3dc84eedbc043.js" async=""></script><script src="/d0dcf9c1039535d44ee74defc829dfbf62dac3c5-bfccc4cc943052029067.js" async=""></script><script src="/cb1608f2-40242bba701caad7c6e4.js" async=""></script><script src="/app-66f0ec01e30b8b887410.js" async=""></script><script src="/framework-8d1138a25637f5ba2109.js" async=""></script><script src="/webpack-runtime-3e9b570c16004247b040.js" async=""></script></body></html>
