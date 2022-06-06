@@ -25,6 +25,10 @@ const PostInfoWrapper = styled.div`
   width: 768px;
   height: 100%;
   margin: 100px auto 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 const Title = styled.h1`

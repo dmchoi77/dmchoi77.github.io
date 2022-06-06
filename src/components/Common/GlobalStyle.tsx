@@ -2,12 +2,12 @@ import React, { FunctionComponent } from 'react'
 import { Global, css } from '@emotion/react'
 
 const defaultStyle = css`
-  @font-face {
-    font-family: 'OTWelcomeBA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeBA.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
+  // @font-face {
+  //   font-family: 'OTWelcomeBA';
+  //   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeBA.woff2') format('woff2');
+  //   font-weight: normal;
+  //   font-style: normal;
+  // }
 
   * {
     padding: 0;
@@ -24,6 +24,9 @@ const defaultStyle = css`
   }
 
   body.light-mode {
+    a {
+      color: rgba(0,0,0,0.8);
+    }
     color: rgba(0,0,0,0.8);
     background-color: rgb(255 250 237 / 66%);
   }
@@ -33,14 +36,13 @@ const defaultStyle = css`
     background-color: #363636;
   }
 
-  a,
-  a:hover {
+  a {
     color: inherit;
     text-decoration: none;
     cursor: pointer;
   }
 
-  ul a {
+  ul a {  
     padding: 0 6px;
   }
 

@@ -38,10 +38,10 @@ const Footer: FunctionComponent = function () {
     <FooterWrapper>
       <Content>
         <ul style={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
-          <a href="https://github.com/dmchoi77" target='_blank'>
+          <a style={{ color: "#ffff" }} href="https://github.com/dmchoi77" target='_blank'>
             Github
           </a>
-          <a href="mailto:dm.choi.dev@gmail.com">
+          <a style={{ color: "#ffff" }} href="mailto:dm.choi.dev@gmail.com">
             Contact
           </a>
         </ul>
